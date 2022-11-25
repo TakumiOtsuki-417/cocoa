@@ -2,10 +2,8 @@
 // カスタムメニューの「場所」を設定
 register_nav_menu( 'global-navi', 'グローバルナビ' );
 // アイキャッチ画像を導入
-function theme_setup() {
-  add_theme_support('post-thumbnails');
-}
-add_action('after_setup_theme', 'theme_setup');
+add_theme_support('post-thumbnails');
+
 // ■■■■■■■■■■■■■■■■■■■■■■■
 // CSS、JSを出力
 // ■■■■■■■■■■■■■■■■■■■■■■■
@@ -64,13 +62,13 @@ return "<p>".$content."</p>";
 add_shortcode ('aetext', 'actExplanationText');
 function actExampleVoice ($atts, $content = null) {
   extract(shortcode_atts( array(
-    'face' => 'unknown',
+    'face' => 'other3',
     'name' => '???',
 ), $atts ));
   $content = do_shortcode (shortcode_unautop ($content));
 return '<div class="act act-'.$face.'">
   <div class="act__face">
-    <img src="'.get_template_directory_uri().'/images/'.$face.'.png" alt="">
+    <img src="'.get_template_directory_uri().'/images/faces/'.$face.'.png" alt="">
   </div>
   <div class="act__content">
     <div class="name">
@@ -81,30 +79,16 @@ return '<div class="act act-'.$face.'">
 </div>';
 }
 add_shortcode ('aevoice', 'actExampleVoice');
-function actExampleVoiceBig ($atts, $content = null) {
-  extract(shortcode_atts( array(
-    'face' => 'unknown',
-    'name' => '???',
-), $atts ));
-  $content = do_shortcode (shortcode_unautop ($content));
-return '<div class="act act-'.$face.'">
-  <div class="act__face">
-    <img src="'.get_template_directory_uri().'/images/'.$face.'.png" alt="">
-  </div>
-  <div class="act__content">
-    <div class="name">
-      '.$name.'
-    </div>
-    <p class="big">'.$content.'</p>
-  </div>
-</div>';
-}
-add_shortcode ('aevoicebig', 'actExampleVoiceBig');
 function redSpan ($atts, $content = null) {
   $content = do_shortcode (shortcode_unautop ($content));
 return '<span class="red">'.$content.'</span>';
 }
 add_shortcode ('red', 'redSpan');
+function bigSpan ($atts, $content = null) {
+  $content = do_shortcode (shortcode_unautop ($content));
+return '<span class="big">'.$content.'</span>';
+}
+add_shortcode ('big', 'bigSpan');
 function objectiveTextBox ($atts, $content = null) {
   $content = do_shortcode (shortcode_unautop ($content));
 return '<div class="objectiveBox">'.$content.'</div>';
