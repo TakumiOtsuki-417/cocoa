@@ -1,5 +1,12 @@
 @use 'argument' as arg;
 
+a {
+  transition: all 0.2s;
+&:hover {
+  color: arg.$pink;
+}
+
+}
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* 基本フォントサイズ */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
@@ -43,32 +50,79 @@ body {
   margin: 0 auto;
 }
 
+.innerFull {
+  width: 100%;
+}
+.inner1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.flex73 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > article,
+  > aside {
+    width: 100%;
+    margin-top: 1.4rem;
+    padding: 0 1.5rem;
+  }
+  @include arg.pc {
+    > article {
+      width: 70%;
+    }
+    > aside {
+      width: 30%;
+    }
+  }
+  h1 {
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding: 3.0rem 0.5rem 1.2rem 1.5rem;
+    background-color: white;
+    &::before {
+      position: absolute;
+      content: "☆";
+      width: 7px;
+      left: 0.5rem;
+      height: calc(100% - 4.2rem);
+      margin-right: 0.5rem;
+      color: transparent;
+      background-color: arg.$pink;
+      border-radius: 10px;
+    }
+    &::after {
+      @include arg.tape;
+      top: 25px;
+      left: 40%;
+      transform: rotate(5deg);
+    }
+  }
+}
+
 main {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
+.block {
+  position: relative;
+  @include arg.npadding;
+  background-color: arg.$white;
+  border-radius: 2px;
 
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  @include arg.pc {
-    width: 70%;
-    max-width: 700px;
+  &::before {
+    @include arg.tape;
+    left: 5px;
+    top: 25px;
+  }
+  &::after {
+    @include arg.tape;
+    right: -10%;
+    top: 40px;
+    transform: rotate(30deg);
   }
 }
 
-aside {
-  width: 100%;
-  @include arg.pc{
-    width: 30%;
-    max-width: 300px;
-  }
-}
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* ヘッダー、フッター */
@@ -173,7 +227,8 @@ footer {
 
 .breadcrumbs {
   padding: 0.4rem;
-  border-top: 1px solid rgba(0,0,0,0.6);
-  border-bottom: 1px solid rgba(0,0,0,0.6);
+  border-top: 1px solid rgba(255, 143, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 143, 255, 0.2);
   background-color: arg.$backgroundPink;
 }
+

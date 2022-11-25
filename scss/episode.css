@@ -2,12 +2,6 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* エピソードページ（背景システム、キャラセリフ除く） */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-.article__episode,
-.aside__episode {
-  width: 100%;
-  max-width: 100%;
-}
-
 .article__episode {
   position: relative;
   display: flex;
@@ -37,7 +31,8 @@
   width: 90%;
   max-width: 750px;
   padding: 2rem 1rem;
-  border: 1px double black;
+  border: 2px dotted #ff8fff;
+  border-radius: 10px;
 }
 .article__episode .description h2 {
   position: absolute;
@@ -47,7 +42,8 @@
   width: 50%;
   max-width: 320px;
   text-align: center;
-  background-color: red;
+  background-color: #ff8fff;
+  border-radius: 10px;
 }
 .article__episode .content h2 {
   position: relative;
@@ -78,23 +74,17 @@
   box-shadow: 0 0 5px black;
 }
 
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .aside__episode {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  /*--------------------------------
-  PREV NEXT
-  ---------------------------------*/
-  /*-- ここまで --*/
-  /*media Queries タブレットサイズ
-  ----------------------------------------------------*/
-  /*media Queries タブレットサイズ
-  ----------------------------------------------------*/
-  /*media Queries PCサイズ
-  ----------------------------------------------------*/
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 }
 .aside__episode h2 {
   width: 100%;
@@ -106,23 +96,40 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
+  padding: 1.8rem 0.8rem;
   background-color: white;
 }
-.aside__episode .finish h3, .aside__episode .finish div {
+.aside__episode .finish > h3,
+.aside__episode .finish > .sns,
+.aside__episode .finish > .scene {
   width: 100%;
-  max-width: 800px;
 }
 .aside__episode .finish h3 {
   text-align: center;
 }
+.aside__episode .finish .sns {
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+.aside__episode h3 {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 130%;
+}
 .aside__episode #prev_next {
   width: 100%;
-  display: table;
+  max-width: 800px;
+  display: flex;
+  margin-bottom: 4rem;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
 }
-.aside__episode #prev_next #prev, .aside__episode #prev_next #next {
+@media screen and (min-width: 560px) {
+  .aside__episode #prev_next {
+    width: 80%;
+  }
+}
+.aside__episode #prev_next #prev,
+.aside__episode #prev_next #next {
   width: 50%;
   padding: 30px 10px 10px;
   border-top: #ccc 1px solid;
@@ -131,18 +138,26 @@
   position: relative;
   text-decoration: none;
 }
-.aside__episode #prev_next #prev p, .aside__episode #prev_next #next p {
-  font-size: 120%;
-  line-height: 1.5;
-  color: white;
-}
-.aside__episode #prev_next #prev:hover, .aside__episode #prev_next #next:hover {
+.aside__episode #prev_next #prev:hover,
+.aside__episode #prev_next #next:hover {
   background-color: rgba(238, 238, 238, 0.7);
+}
+.aside__episode #prev_next #prev:hover p,
+.aside__episode #prev_next #next:hover p {
+  color: #ff8fff;
+}
+.aside__episode #prev_next #prev p,
+.aside__episode #prev_next #next p {
+  margin-top: 0.3rem;
+  font-size: 120%;
+  color: white;
+  text-align: center;
 }
 .aside__episode #prev_next #prev {
   border-right: #ccc 1px solid;
 }
-.aside__episode #prev_next #prev_title, .aside__episode #prev_next #next_title {
+.aside__episode #prev_next #prev_title,
+.aside__episode #prev_next #next_title {
   font-size: 90%;
   top: -1em;
   position: absolute;
@@ -150,24 +165,25 @@
   background-color: rgb(0, 0, 0);
   text-align: center;
   padding: 3px;
-  color: magenta;
+  color: #ff8fff;
 }
 .aside__episode #prev_next #next_title {
   right: 10px;
 }
-.aside__episode #prev_next #prev img, .aside__episode #prev_next #next img {
+.aside__episode #prev_next img {
   margin: 0 auto;
+  width: 75%;
 }
-.aside__episode #prev_next #prev_no, .aside__episode #prev_next #next_no {
+.aside__episode #prev_next #prev_no,
+.aside__episode #prev_next #next_no {
   width: 50%;
-  height: 140px;
   padding: 0 10px;
   display: table-cell;
 }
 .aside__episode #prev_next #prev_no {
   border-right: #ccc 1px solid;
 }
-.aside__episode #prev_next_home {
+.aside__episode #prev_next #prev_next_home {
   margin: 0 auto;
   background-color: #39f;
   border: solid 9px #fff;
@@ -179,39 +195,44 @@
   -moz-box-shadow: 0 0 0 3px #39f;
   text-align: center;
 }
-.aside__episode #prev_next_home:hover {
+.aside__episode #prev_next #prev_next_home:hover {
   background-color: rgba(0, 0, 255, 0.7);
 }
-.aside__episode #prev_next_home i {
+.aside__episode #prev_next #prev_next_home i {
   color: #FFF;
   margin: 10px auto;
   font-size: 60px;
 }
-@media only screen and (min-width: 780px) {
-  .aside__episode {
-    /*-- ここから --*/
-    /*--------------------------------------
-    768px PREV NEXT
-    --------------------------------------*/
-    /*-- ここまで --*/
-  }
-  .aside__episode #prev_next #prev, .aside__episode #prev_next #prev::before, .aside__episode #prev_next #prev::after,
-.aside__episode #prev_next #next, .aside__episode #prev_next #next::before, .aside__episode #prev_next #next::after {
-    box-sizing: border-box;
-    transition: all 0.3s;
-  }
-  .aside__episode #prev_next #prev_title, .aside__episode #prev_next #next_title {
-    padding: 3px 10px;
-  }
-  .aside__episode #prev_next #next_title {
-    right: 10px;
-  }
-  .aside__episode #prev_next #prev img {
-    float: left;
-    margin-right: 10px;
-  }
-  .aside__episode #prev_next #next img {
-    float: right;
-    margin-left: 10px;
-  }
+.aside__episode .relateds {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 800px;
+  padding: 0.6rem 0.3rem;
+  overflow-x: scroll;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.aside__episode .relateds li {
+  width: 40%;
+  padding: 0.3rem;
+}
+.aside__episode .relateds li:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+}
+.aside__episode .relateds li a {
+  display: block;
+  transition: all 0.2s;
+}
+.aside__episode .relateds li a.relateds__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.aside__episode .relateds li a.relateds__link:hover img {
+  border-color: #ff8fff;
+}
+.aside__episode .relateds li figure {
+  margin: 0;
+}
+.aside__episode .relateds li img {
+  width: 80%;
+  margin-left: 10%;
+  border: 2px solid black;
 }/*# sourceMappingURL=episode.css.map */

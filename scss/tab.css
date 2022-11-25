@@ -2,24 +2,31 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* タブシステム */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-.article__postarchive {
-  display: block;
-  min-height: 100vh;
+.phasetab {
+  margin-bottom: 3rem;
 }
-
+.phasetab__text {
+  text-align: center;
+}
+.phasetab__text::before, .phasetab__text::after {
+  content: "🔻";
+}
 .phasetab ul {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .phasetab li {
+  margin: 0 0.2rem 0.2rem;
   padding: 0.5rem 1rem;
   border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
   cursor: pointer;
 }
 .phasetab li.active {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  border: none;
   cursor: default;
 }
 

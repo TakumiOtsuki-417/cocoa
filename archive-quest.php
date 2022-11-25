@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 <main>
-  <article>
-    
-  </article>
-  <aside>
-    
-  </aside>
+  <div class="inner1000 flex73">
+    <article>
+      
+    </article>
+    <aside>
+      
+    </aside>
+  </div>
 </main>
 <?php get_footer(); ?>

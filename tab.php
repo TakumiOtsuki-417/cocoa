@@ -1,6 +1,6 @@
 <?php if(is_archive(array("output", "episode", "quest"))): ?>
 <div class="phasetab"><!-- フェーズのタブ -->
-  <p class="phasetab__text" id="aaa">フェーズを選んでください</p>
+  <p class="phasetab__text" id="aaa">フェーズを選んでね</p>
   <ul>
   <?php for($count = 1; $count < 9; $count++): ?>
     <li class="tablist <?php if($count==1){ echo "active"; } ?>" data-tablistnum="<?php echo $count; ?>"><?php echo $count; ?></li>

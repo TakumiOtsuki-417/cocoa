@@ -13,17 +13,18 @@ const tabsystem = ()=>{
   //クリックイベントの中身
 function clickTab(t){
   // 「active」じゃないタブをクリックした場合
-  if(!t.target.classList.contains("active")){
+  if(!t.currentTarget.classList.contains("active")){
     // まず「active」付いてるやつを排除
     tabs.forEach(function(tab){
       if(tab.classList.contains("active")){
         tabContent = Array.from(document.getElementsByClassName("phase-active"));
+        console.log(tabContent);
         tab.classList.remove("active");
         tabContent[0].classList.remove("phase-active");
       }
     })
     // クリックしたタブに紐づくコンテンツを検索
-    thisNum = t.target.dataset.tablistnum;
+    thisNum = t.currentTarget.dataset.tablistnum;
     tabContent = Array.from(document.getElementsByClassName(`phase${thisNum}`));
     // クリックしたタブと連関コンテンツを「active」
     t.target.classList.add("active");
