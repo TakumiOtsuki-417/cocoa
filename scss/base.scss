@@ -1,5 +1,12 @@
 @use 'argument' as arg;
 
+a {
+  transition: all 0.2s;
+&:hover {
+  color: arg.$pink;
+}
+
+}
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* 基本フォントサイズ */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
