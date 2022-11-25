@@ -1,7 +1,171 @@
 @use 'argument' as arg;
 
+// キャラカラー
+$cocoa1: rgba(255, 143, 255, 1);
+$cocoa2: rgb(208, 116, 208);
+$yura1: rgb(60, 199, 250);
+$yura2: rgb(37, 122, 152);
+$hako1: rgb(221, 118, 237);
+$hako2: rgb(153, 81, 164);
+$yusa1: rgb(233, 206, 125);
+$yusa2: rgb(155, 137, 82);
+$dumbbell1: rgb(154, 207, 108);
+$dumbbell2: rgb(83, 103, 65);
+$hiro1: rgb(237, 108, 108);
+$hiro2: rgb(161, 65, 65);
+$uminari1: rgb(105, 158, 168);
+$uminari2: rgba(26, 59, 66, 0.3);
+$maki1: rgb(232, 225, 127);
+$maki2: rgba(111, 107, 56, 0.3);
+$tama1: rgb(185, 174, 174);
+$tama2: rgba(29, 7, 10, 0.3);
+
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* キャラクターページ */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 
+.charatab {
+  ul {
+    flex-wrap: nowrap;
+    justify-content: left;
+    overflow-x: scroll;
+  }
+  li {
+    width: calc(100% / 9);
+    min-width: 45px;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    img {
+      pointer-events: none;
+    }
+  }
+}
 
+.article__characters {
+  /* 吹き出し本体 */
+  .balloon{
+    position: relative;
+    padding: 20px;
+    background-color: #ffadad;
+    border: 2px solid #ca8888;
+  }
+  /* beforeで枠線の三角を表現 */
+  .balloon::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: -15px;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ca8888;
+    border-left: 15px solid transparent;
+  }
+  /* beforeで本体の三角を表現 */
+  .balloon::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: -12px;
+    border-right: 15px solid transparent;
+     border-bottom: 15px solid #ffadad;
+    border-left: 15px solid transparent;
+  }
+  .balloon {
+    &__cocoa {
+      background-color: $cocoa1;
+      border-color: $cocoa2;
+      &::before {
+        border-bottom-color: $cocoa2;
+      }
+      &::after {
+        border-bottom-color: $cocoa1;
+      }
+    }
+    &__yura {
+      background-color: $yura1;
+      border-color: $yura2;
+      &::before {
+        border-bottom-color: $yura2;
+      }
+      &::after {
+        border-bottom-color: $yura1;
+      }
+    }
+    &__hako {
+      background-color: $hako1;
+      border-color: $hako2;
+      &::before {
+        border-bottom-color: $hako2;
+      }
+      &::after {
+        border-bottom-color: $hako1;
+      }
+    }
+    &__yusa {
+      background-color: $yusa1;
+      border-color: $yusa2;
+      &::before {
+        border-bottom-color: $yusa2;
+      }
+      &::after {
+        border-bottom-color: $yusa1;
+      }
+    }
+    &__dumbbell {
+      background-color: $dumbbell1;
+      border-color: $dumbbell2;
+      &::before {
+        border-bottom-color: $dumbbell2;
+      }
+      &::after {
+        border-bottom-color: $dumbbell1;
+      }
+    }
+    &__hiro {
+      background-color: $hiro1;
+      border-color: $hiro2;
+      &::before {
+        border-bottom-color: $hiro2;
+      }
+      &::after {
+        border-bottom-color: $hiro1;
+      }
+    }
+    &__uminari {
+      background-color: $uminari1;
+      border-color: $uminari2;
+      &::before {
+        border-bottom-color: $uminari2;
+      }
+      &::after {
+        border-bottom-color: $uminari1;
+      }
+    }
+    &__maki {
+      background-color: $maki1;
+      border-color: $maki2;
+      &::before {
+        border-bottom-color: $maki2;
+      }
+      &::after {
+        border-bottom-color: $maki1;
+      }
+    }
+    &__tama {
+      background-color: $tama1;
+      border-color: $tama2;
+      &::before {
+        border-bottom-color: $tama2;
+      }
+      &::after {
+        border-bottom-color: $tama1;
+      }
+    }
+  }
+}

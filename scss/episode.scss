@@ -31,7 +31,8 @@
       width: 90%;
       max-width: 750px;
       padding: 2rem 1rem;
-      border: 1px double black;
+      border: 2px dotted arg.$pink;
+      border-radius: 10px;
     }
     h2 {
       position: absolute;
@@ -41,7 +42,8 @@
       width: 50%;
       max-width: 320px;
       text-align: center;
-      background-color:red;
+      background-color: arg.$pink;
+      border-radius: 10px;
     }
   }
   .content {
@@ -75,6 +77,11 @@
     box-shadow: 0 0 5px black;
   }
 }
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  // こっからaside
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
 .aside__episode {
   position: relative;
   display: flex;
@@ -106,10 +113,11 @@
     }
   }
 
-/*--------------------------------
-PREV NEXT
----------------------------------*/
-h3 {
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  // 隣接記事レイアウト
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+  h3 {
   width: 100%;
   margin-bottom: 1.0rem;
   font-size: 130%;
@@ -200,7 +208,9 @@ h3 {
 }
 
 
-  // 関連エピソード
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  // 関連記事レイアウト
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 
 .relateds {
   display: flex;

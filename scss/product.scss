@@ -1,0 +1,64 @@
+@use 'argument' as arg;
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* 作品情報、注意事項 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.product {
+  width: 100%;
+  background-color: white;
+
+  img {
+    display: inline-block;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid arg.$pink;
+  }
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  dt {
+    width: 45%;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    span {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(0,0,0,0.8);
+      border-radius: 25px;
+    }
+  }
+  dd {
+    width: 55%;
+    padding: 1.7rem 0 1.5rem 0;
+  }
+  dt:not(:nth-child(11)),
+  dd:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.0rem;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.quote li::before {
+  content: "📕";
+}
+.note li::before {
+  content: "※";
+}
+

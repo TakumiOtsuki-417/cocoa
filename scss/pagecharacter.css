@@ -1,4 +1,145 @@
 @charset "UTF-8";
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* キャラクターページ */
-/* ■■■■■■■■■■■■■■■■■■■■■■■ *//*# sourceMappingURL=pagecharacter.css.map */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.charatab ul {
+  flex-wrap: nowrap;
+  justify-content: left;
+  overflow-x: scroll;
+}
+.charatab li {
+  width: 11.1111111111%;
+  min-width: 45px;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+.charatab li img {
+  pointer-events: none;
+}
+
+.article__characters {
+  /* 吹き出し本体 */
+  /* beforeで枠線の三角を表現 */
+  /* beforeで本体の三角を表現 */
+}
+.article__characters .balloon {
+  position: relative;
+  padding: 20px;
+  background-color: #ffadad;
+  border: 2px solid #ca8888;
+}
+.article__characters .balloon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -15px;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ca8888;
+  border-left: 15px solid transparent;
+}
+.article__characters .balloon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -12px;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ffadad;
+  border-left: 15px solid transparent;
+}
+.article__characters .balloon__cocoa {
+  background-color: rgb(255, 143, 255);
+  border-color: rgb(208, 116, 208);
+}
+.article__characters .balloon__cocoa::before {
+  border-bottom-color: rgb(208, 116, 208);
+}
+.article__characters .balloon__cocoa::after {
+  border-bottom-color: rgb(255, 143, 255);
+}
+.article__characters .balloon__yura {
+  background-color: rgb(60, 199, 250);
+  border-color: rgb(37, 122, 152);
+}
+.article__characters .balloon__yura::before {
+  border-bottom-color: rgb(37, 122, 152);
+}
+.article__characters .balloon__yura::after {
+  border-bottom-color: rgb(60, 199, 250);
+}
+.article__characters .balloon__hako {
+  background-color: rgb(221, 118, 237);
+  border-color: rgb(153, 81, 164);
+}
+.article__characters .balloon__hako::before {
+  border-bottom-color: rgb(153, 81, 164);
+}
+.article__characters .balloon__hako::after {
+  border-bottom-color: rgb(221, 118, 237);
+}
+.article__characters .balloon__yusa {
+  background-color: rgb(233, 206, 125);
+  border-color: rgb(155, 137, 82);
+}
+.article__characters .balloon__yusa::before {
+  border-bottom-color: rgb(155, 137, 82);
+}
+.article__characters .balloon__yusa::after {
+  border-bottom-color: rgb(233, 206, 125);
+}
+.article__characters .balloon__dumbbell {
+  background-color: rgb(154, 207, 108);
+  border-color: rgb(83, 103, 65);
+}
+.article__characters .balloon__dumbbell::before {
+  border-bottom-color: rgb(83, 103, 65);
+}
+.article__characters .balloon__dumbbell::after {
+  border-bottom-color: rgb(154, 207, 108);
+}
+.article__characters .balloon__hiro {
+  background-color: rgb(237, 108, 108);
+  border-color: rgb(161, 65, 65);
+}
+.article__characters .balloon__hiro::before {
+  border-bottom-color: rgb(161, 65, 65);
+}
+.article__characters .balloon__hiro::after {
+  border-bottom-color: rgb(237, 108, 108);
+}
+.article__characters .balloon__uminari {
+  background-color: rgb(105, 158, 168);
+  border-color: rgba(26, 59, 66, 0.3);
+}
+.article__characters .balloon__uminari::before {
+  border-bottom-color: rgba(26, 59, 66, 0.3);
+}
+.article__characters .balloon__uminari::after {
+  border-bottom-color: rgb(105, 158, 168);
+}
+.article__characters .balloon__maki {
+  background-color: rgb(232, 225, 127);
+  border-color: rgba(111, 107, 56, 0.3);
+}
+.article__characters .balloon__maki::before {
+  border-bottom-color: rgba(111, 107, 56, 0.3);
+}
+.article__characters .balloon__maki::after {
+  border-bottom-color: rgb(232, 225, 127);
+}
+.article__characters .balloon__tama {
+  background-color: rgb(185, 174, 174);
+  border-color: rgba(29, 7, 10, 0.3);
+}
+.article__characters .balloon__tama::before {
+  border-bottom-color: rgba(29, 7, 10, 0.3);
+}
+.article__characters .balloon__tama::after {
+  border-bottom-color: rgb(185, 174, 174);
+}/*# sourceMappingURL=pagecharacter.css.map */

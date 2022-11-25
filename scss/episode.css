@@ -31,7 +31,8 @@
   width: 90%;
   max-width: 750px;
   padding: 2rem 1rem;
-  border: 1px double black;
+  border: 2px dotted #ff8fff;
+  border-radius: 10px;
 }
 .article__episode .description h2 {
   position: absolute;
@@ -41,7 +42,8 @@
   width: 50%;
   max-width: 320px;
   text-align: center;
-  background-color: red;
+  background-color: #ff8fff;
+  border-radius: 10px;
 }
 .article__episode .content h2 {
   position: relative;
@@ -72,14 +74,17 @@
   box-shadow: 0 0 5px black;
 }
 
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .aside__episode {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*--------------------------------
-  PREV NEXT
-  ---------------------------------*/
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 }
 .aside__episode h2 {
   width: 100%;

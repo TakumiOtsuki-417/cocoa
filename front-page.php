@@ -20,8 +20,8 @@ $dire = get_template_directory_uri(); ?>
         <ul>
           <li class="output"><h3><a href="/output"><img src="<?php echo $dire; ?>/images/frontoutput.png" alt=""></a></h3><p>ちょっぴり難しい四字熟語たちをいっぱい勉強するよ！</p></li>
           <li class="episode"><h3><a href="/episode"><img src="<?php echo $dire; ?>/images/frontepisode.png" alt=""></a></h3><p>稜泉学園のちょっとした生活を覗いてみてね！</p></li>
-          <li class="quest"><h3><a href="/quest"><img src="<?php echo $dire; ?>/images/frontquest.png" alt=""></a></h3><p>ちょっとした四字熟語問題に挑戦！　ちゃんと答えられるかな？</p></li>
-          <li class="character"><h3><a href="/character"><img src="<?php echo $dire; ?>/images/frontcharacter.png" alt=""></a></h3><p>今回いっぱい活躍する稜泉学生を紹介するよ！</p></li>
+          <li class="quest"><h3><a href="#"><img src="<?php echo $dire; ?>/images/frontquest.png" alt=""></a></h3><p>ちょっとした四字熟語問題に挑戦！　ちゃんと答えられるかな？</p></li>
+          <li class="character"><h3><a href="/characters"><img src="<?php echo $dire; ?>/images/frontcharacter.png" alt=""></a></h3><p>今回いっぱい活躍する稜泉学生を紹介するよ！</p></li>
           <li class="about"><h3><a href="/about"><img src="<?php echo $dire; ?>/images/frontabout.png" alt=""></a></h3></li>
         </ul>
       </section>

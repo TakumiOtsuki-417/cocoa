@@ -118,7 +118,7 @@ main {
   &::after {
     @include arg.tape;
     right: -10%;
-    top: 20%;
+    top: 40px;
     transform: rotate(30deg);
   }
 }
@@ -227,7 +227,8 @@ footer {
 
 .breadcrumbs {
   padding: 0.4rem;
-  border-top: 1px solid rgba(0,0,0,0.6);
-  border-bottom: 1px solid rgba(0,0,0,0.6);
+  border-top: 1px solid rgba(255, 143, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 143, 255, 0.2);
   background-color: arg.$backgroundPink;
 }
+
