@@ -44,11 +44,35 @@ body {
   margin: 0 auto;
 }
 
+.innerFull {
+  width: 100%;
+}
+
+.inner1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flex73 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex73 > article,
+.flex73 > aside {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .flex73 > article {
+    width: 70%;
+  }
+  .flex73 > aside {
+    width: 30%;
+  }
+}
+
 main {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 article {
@@ -56,23 +80,6 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  article {
-    width: 70%;
-    max-width: 700px;
-  }
-}
-
-aside {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  aside {
-    width: 30%;
-    max-width: 300px;
-  }
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */

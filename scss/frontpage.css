@@ -4,8 +4,6 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .article__frontpage,
 .aside__frontpage {
-  width: 100%;
-  max-width: 100%;
   background-color: white;
 }
 .article__frontpage > section,

@@ -2,10 +2,6 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* ABOUT仕様 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-.article__about, .aside__about {
-  width: 100%;
-  max-width: 100%;
-}
 .article__about > section, .aside__about > section {
   width: 100%;
   display: flex;

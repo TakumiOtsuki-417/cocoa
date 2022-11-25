@@ -2,12 +2,6 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* エピソードページ（背景システム、キャラセリフ除く） */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-.article__episode,
-.aside__episode {
-  width: 100%;
-  max-width: 100%;
-}
-
 .article__episode {
   position: relative;
   display: flex;
