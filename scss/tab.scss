@@ -1,0 +1,36 @@
+@use 'argument' as arg;
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* タブシステム */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.article__postarchive {
+  display: block;
+  min-height: 100vh;
+}
+
+.phasetab {
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  li {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0,0,0,0.6);
+    cursor: pointer;
+
+    &.active {
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      cursor: default;
+    }
+  }
+}
+.phase {
+  display: none;
+
+  &.phase-active {
+    display: block;
+  }
+}

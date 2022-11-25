@@ -1,0 +1,23 @@
+@use 'argument' as arg;
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* エピソード、アウトプット親ページ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.article__postarchive {
+  .phase {
+    li a{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 20%;
+    }
+    p {
+      width: 80%;
+      font-size: 120%;
+    }
+  }
+}

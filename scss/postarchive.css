@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* エピソード、アウトプット親ページ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.article__postarchive .phase li a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.article__postarchive .phase img {
+  width: 20%;
+}
+.article__postarchive .phase p {
+  width: 80%;
+  font-size: 120%;
+}/*# sourceMappingURL=postarchive.css.map */

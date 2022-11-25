@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* キャラクターセリフ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.act {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+.act__face {
+  width: 25%;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.act__content {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 1.3rem 1rem;
+  width: 72%;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  background: #FFF;
+  border: solid 3px #555;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.act__content:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.act__content:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+.act__content p {
+  margin: 0;
+  padding: 0;
+}
+
+.act__face {
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  top: -18px;
+  left: -8px;
+  max-width: 100%;
+  padding: 0.2rem;
+  border: 3px solid red;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.big {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}/*# sourceMappingURL=act.css.map */

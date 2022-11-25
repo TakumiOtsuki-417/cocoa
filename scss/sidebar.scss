@@ -1,0 +1,108 @@
+@use 'argument' as arg;
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* サイドバー */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+
+.sidebar {
+  background-color: white;
+  position: relative;
+  padding: 1.8rem 0.8rem;
+}
+
+
+.sidebar:before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 10%;
+  height: 35px;
+  opacity: 0.7;
+  margin: -40px auto 10px -22px;
+  background-color: #ff99ac; /* 背景色 */
+  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  transform: rotate(-9deg);
+  left: 10px;
+  right: 10px;
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+}
+.sidebar:after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 11%;
+  height: 35px;
+  opacity: 0.7;
+  margin: -40px -22px 10px auto;
+  background-color: #ff99ac; /* 背景色 */
+  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  transform: rotate(3deg);
+  left: 10px;
+  right: 10px;
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* アイウエオ */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.sidebar__search__categories {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li.cat-1 { //未分類を消す
+    display: none;
+  }
+  li {
+    width: 20%;
+    margin-bottom: 20px;
+  }
+  a {
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 1px;
+  }
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* SNS */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.sns__container {
+  display: flex;
+}
+
+.sns__container a {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+.sns__container a:hover {
+  opacity: 0.6;
+}
+
+.sns__twitter {
+  background: #55acee;
+}
+
+.sns__facebook {
+  background: #3b5998;
+}
+
+.sns__pocket {
+  background: #ef3f56;
+}
+
+.sns__line {
+  background: #1dcd00;
+}
+
+.sns__hatena {
+  background: #00a5de;
+}

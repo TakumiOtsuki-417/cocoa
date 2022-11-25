@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* ABOUT仕様 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.article__about, .aside__about {
+  width: 100%;
+  max-width: 100%;
+}
+.article__about > section, .aside__about > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+}
+.article__about > section .inner, .aside__about > section .inner {
+  width: 100%;
+  max-width: 1000px;
+}
+.article__about h2, .aside__about h2 {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.article__about .fv, .aside__about .fv {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article__about .fv h1, .aside__about .fv h1 {
+  color: white;
+  text-shadow: 0 0 10px #ff8fff;
+}
+.article__about .fv h1 span, .aside__about .fv h1 span {
+  font-size: 150%;
+}
+.article__about p, .aside__about p {
+  width: 100%;
+}
+.article__about .concept, .aside__about .concept {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.article__about .concept img, .aside__about .concept img {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 0 6px #ff8fff;
+}
+.article__about .concept h2, .article__about .concept p, .aside__about .concept h2, .aside__about .concept p {
+  text-shadow: 0 0 5px #ff8fff;
+}
+.article__about .concept h2, .aside__about .concept h2 {
+  text-align: center;
+}
+.article__about .concept p, .aside__about .concept p {
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+.article__about #scenebg_about2, .aside__about #scenebg_about2 {
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+.article__about .story, .aside__about .story {
+  width: 100%;
+  background-color: #fff;
+}
+.article__about .story img, .aside__about .story img {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.article__about .story h2, .article__about .story p, .aside__about .story h2, .aside__about .story p {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.article__about .story p, .aside__about .story p {
+  margin-bottom: 1.5rem;
+}
+.article__about .character, .aside__about .character {
+  width: 100%;
+  display: block;
+}
+.article__about .character .inner, .aside__about .character .inner {
+  position: relative;
+}
+.article__about .character .wrap .characocoa, .article__about .character .wrap .charayura, .article__about .character .wrap .charahako, .aside__about .character .wrap .characocoa, .aside__about .character .wrap .charayura, .aside__about .character .wrap .charahako {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+.article__about .character .wrap .characocoa span, .article__about .character .wrap .charayura span, .article__about .character .wrap .charahako span, .aside__about .character .wrap .characocoa span, .aside__about .character .wrap .charayura span, .aside__about .character .wrap .charahako span {
+  display: block;
+  width: 40%;
+  height: 120vh;
+}
+.article__about .character .wrap .characocoa div, .article__about .character .wrap .charayura div, .article__about .character .wrap .charahako div, .aside__about .character .wrap .characocoa div, .aside__about .character .wrap .charayura div, .aside__about .character .wrap .charahako div {
+  position: absolute;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 95%;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  padding: 2rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.article__about .character .wrap .characocoa div h2, .article__about .character .wrap .charayura div h2, .article__about .character .wrap .charahako div h2, .aside__about .character .wrap .characocoa div h2, .aside__about .character .wrap .charayura div h2, .aside__about .character .wrap .charahako div h2 {
+  display: inline-block;
+}
+.article__about .character .wrap .characocoa div img, .article__about .character .wrap .charayura div img, .article__about .character .wrap .charahako div img, .aside__about .character .wrap .characocoa div img, .aside__about .character .wrap .charayura div img, .aside__about .character .wrap .charahako div img {
+  display: inline-block;
+  width: 30%;
+  max-width: 100px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.article__about .link, .aside__about .link {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+.article__about .link a, .aside__about .link a {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: 25px;
+  background-color: green;
+  color: white;
+}
+.article__about .link h3, .aside__about .link h3 {
+  font-size: 150%;
+  margin-bottom: 0.8rem;
+}
+.article__about .link h3::before, .article__about .link h3::after, .aside__about .link h3::before, .aside__about .link h3::after {
+  content: "☕️";
+  display: inline-block;
+  padding: 0 0.2rem;
+}
+.article__about .link img, .aside__about .link img {
+  display: inline-block;
+  width: 50%;
+}
+.article__about .link p, .aside__about .link p {
+  margin-bottom: 1.2rem;
+}
+.article__about .link section, .aside__about .link section {
+  margin-bottom: 2rem;
+}
+.article__about .link .inner .scene, .aside__about .link .inner .scene {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .article__about .link .inner, .aside__about .link .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .article__about .link .inner .__output,
+.article__about .link .inner .__episode, .aside__about .link .inner .__output,
+.aside__about .link .inner .__episode {
+    width: 50%;
+  }
+}
+.article__about .cf, .aside__about .cf {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article__about .cf p, .aside__about .cf p {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgb(255, 98, 98);
+}
+.article__about .product, .aside__about .product {
+  width: 100%;
+  background-color: white;
+}
+.article__about .product img, .aside__about .product img {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid #ff8fff;
+}
+.article__about .product dl, .aside__about .product dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.article__about .product dt, .aside__about .product dt {
+  width: 45%;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+}
+.article__about .product dt span, .aside__about .product dt span {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+.article__about .product dd, .aside__about .product dd {
+  width: 55%;
+  padding: 1.7rem 0 1.5rem 0;
+}
+.article__about .product dt:not(:nth-child(11)),
+.article__about .product dd:not(:last-child), .aside__about .product dt:not(:nth-child(11)),
+.aside__about .product dd:not(:last-child) {
+  border-bottom: 1px solid black;
+}/*# sourceMappingURL=pageabout.css.map */

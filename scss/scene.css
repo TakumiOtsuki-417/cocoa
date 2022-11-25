@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* エピソードの背景システム */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* init */
+.background {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  z-index: -3;
+  background-position: center center;
+  opacity: 0;
+  background-size: cover;
+  transition: all 0.5s ease 0s;
+}
+
+.show .background {
+  opacity: 1;
+}
+
+.scene .wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#scenebg_none {
+  background: none;
+}
+
+#scenebg_white {
+  background-color: white;
+}
+
+#scenebg_black {
+  background-color: black;
+}
+
+#scenebg_roka2 {
+  background-image: url(../images/sproka2.png);
+}
+
+#scenebg_roka {
+  background-image: url(../images/sproka.png);
+}
+
+#scenebg_about {
+  background-image: url(../images/aboutbg.png);
+}
+
+#scenebg_about2 {
+  background-image: url(../images/aboutbg.png);
+}
+
+#scenebg_aboutcocoa {
+  background-image: url(../images/aboutcocoa.png);
+}
+
+#scenebg_aboutyura {
+  background-image: url(../images/aboutyura.png);
+}
+
+#scenebg_abouthako {
+  background-image: url(../images/abouthako.png);
+}
+
+#scenebg_aboutcf {
+  background-image: url(../images/aboutcf.png);
+}
+
+/* PC背景パターン*/
+@media screen and (min-width: 560px) {
+  #scenebg_roka2 {
+    background-image: url(../images/roka2.png);
+  }
+  #scenebg_roka {
+    background-image: url(../images/roka.png);
+  }
+}/*# sourceMappingURL=scene.css.map */

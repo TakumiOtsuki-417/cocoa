@@ -1,0 +1,81 @@
+//
+// @useで読み込む
+// 変数定義ファイル
+//
+
+// カラー変数
+
+//ベースカラー
+$white: #fff;
+
+//メインカラー（ピンク）
+$pink: #ff8fff;
+$backgroundPink: #fff0ff;
+
+$orange: #f2968a;
+$backgroundColor: #ffb9ab;
+$innerBackgroundColor: #fee8e2;
+$headerFooterBackgroundColor: #a65d4e;
+$mainLineColor: #f2968a;
+$subLineColor: #facfc7;
+$accentColorLight: #8af2c9;
+$accentColorDark: #3da67d;
+
+
+// ブレイクポイントを指定
+$pcmax: 1000px;
+$pc: 768px;
+$tab: 560px;
+@mixin pcmax {
+  @media screen and (min-width: ($pcmax)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (min-width: ($tab)) {
+    @content;
+  }
+}
+
+// フォントサイズ変換儀式
+@mixin fontsize($size: 14) {
+    font-size: $size + px;
+    font-size: calc($size / 10) * 1rem;
+}
+@mixin big {
+  $size: 1.2;
+  font-size: $size * 100%;
+}
+
+// ホチキス
+@mixin hoti {
+  content: "";
+  position: absolute;
+  width: 60px;
+  border: 2px solid #C0C0C0; /*ホチキス*/
+  border-radius: 20px;
+  box-shadow: 0 -1px 2px #555;
+}
+// テープ
+@mixin tape {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 10%;
+  height: 35px;
+  opacity: 0.7;
+  margin: -40px auto 10px -22px;
+  background-color: #ff99ac; /* 背景色 */
+  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  transform: rotate(-9deg);
+  left: 10px;
+  right: 10px;
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+}
