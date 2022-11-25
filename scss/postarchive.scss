@@ -5,19 +5,48 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 
 .article__postarchive {
+  h2 {
+    margin-bottom: 1.0rem;
+    text-align: center;
+    &::before {
+      content: "ー ";
+    }
+    &::after {
+      content: " ー";
+    }
+  }
   .phase {
+    li {
+      padding: 1rem 0.3rem;
+    }
+    li:not(:last-child) {
+      border-bottom: 1px solid arg.$backgroundPink;
+    }
+
     li a{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      transition: all 0.5s;
     }
     img {
       width: 20%;
+      border: 2px solid black;
+      border-radius: 15px;
     }
     p {
       width: 80%;
       font-size: 120%;
+    }
+    li a:hover {
+      background-color: rgba(255, 143, 255, 0.1);
+      img {
+        border-color: arg.$pink;
+      }
+      p {
+        color: arg.$pink;
+      }
     }
   }
 }
