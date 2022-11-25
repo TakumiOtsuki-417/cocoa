@@ -8,43 +8,20 @@
 .sidebar {
   background-color: white;
   position: relative;
-  padding: 1.8rem 0.8rem;
+  @include arg.npadding;
 }
 
 
 .sidebar:before {
-  position: absolute;
-  content: "";
-  top: 25px;
-  width: 10%;
-  height: 35px;
-  opacity: 0.7;
-  margin: -40px auto 10px -22px;
-  background-color: #ff99ac; /* 背景色 */
-  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
-  background-position: 0 0, 10px 10px;
-  background-size: 20px 20px;
-  transform: rotate(-9deg);
-  left: 10px;
-  right: 10px;
-  box-shadow:0 0 5px rgba(0,0,0,.2);
+  @include arg.tape;
+  top: 10%;
+  left: 3%;
 }
 .sidebar:after {
-  position: absolute;
-  content: "";
-  top: 25px;
-  width: 11%;
-  height: 35px;
-  opacity: 0.7;
-  margin: -40px -22px 10px auto;
-  background-color: #ff99ac; /* 背景色 */
-  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
-  background-position: 0 0, 10px 10px;
-  background-size: 20px 20px;
+  @include arg.tape;
+  top: 10%;
+  right: -1%;
   transform: rotate(3deg);
-  left: 10px;
-  right: 10px;
-  box-shadow:0 0 5px rgba(0,0,0,.2);
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */

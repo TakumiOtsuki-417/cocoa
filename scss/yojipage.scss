@@ -19,7 +19,7 @@
   background-color: white;
   width: 97%;
   max-width: 800px;
-  padding: 15px;
+  @include arg.npadding;
   min-height: 500px;
   position: relative;
   transform:rotate(0.25deg);

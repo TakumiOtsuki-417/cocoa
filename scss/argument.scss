@@ -22,10 +22,10 @@ $accentColorLight: #8af2c9;
 $accentColorDark: #3da67d;
 
 // 基本四隅余白
-$margin1: 1.8rem;
-$margin2: 0.8rem;
-@include nmargin {
-  margin: $margin1 $margin2;
+$padding1: 1.8rem;
+$padding2: 0.8rem;
+@mixin npadding {
+  padding: $padding1 $padding2;
 }
 
 // ブレイクポイントを指定
@@ -71,8 +71,7 @@ $tab: 560px;
 @mixin tape {
   position: absolute;
   content: "";
-  top: 25px;
-  width: 10%;
+  width: 20%;
   height: 35px;
   opacity: 0.7;
   margin: -40px auto 10px -22px;
@@ -81,7 +80,5 @@ $tab: 560px;
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
   transform: rotate(-9deg);
-  left: 10px;
-  right: 10px;
   box-shadow:0 0 5px rgba(0,0,0,.2);
 }

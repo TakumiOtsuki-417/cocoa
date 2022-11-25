@@ -91,8 +91,7 @@ body {
 .flex73 h1::after {
   position: absolute;
   content: "";
-  top: 25px;
-  width: 10%;
+  width: 20%;
   height: 35px;
   opacity: 0.7;
   margin: -40px auto 10px -22px;
@@ -101,15 +100,54 @@ body {
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
   transform: rotate(-9deg);
-  left: 10px;
-  right: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 25px;
   left: 40%;
-  transform: rotate(0);
+  transform: rotate(5deg);
 }
 
 main {
   overflow: hidden;
+}
+
+.block {
+  position: relative;
+  padding: 1.8rem 0.8rem;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.block::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 35px;
+  opacity: 0.7;
+  margin: -40px auto 10px -22px;
+  background-color: #ff99ac; /* 背景色 */
+  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  transform: rotate(-9deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  left: 5px;
+  top: 25px;
+}
+.block::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 35px;
+  opacity: 0.7;
+  margin: -40px auto 10px -22px;
+  background-color: #ff99ac; /* 背景色 */
+  background-image: radial-gradient(#fff 24%, transparent 0), radial-gradient(#fff 24%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  transform: rotate(-9deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  right: -10%;
+  top: 20%;
+  transform: rotate(30deg);
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */

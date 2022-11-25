@@ -86,14 +86,33 @@ body {
     }
     &::after {
       @include arg.tape;
+      top: 25px;
       left: 40%;
-      transform: rotate(0);
+      transform: rotate(5deg);
     }
   }
 }
 
 main {
   overflow: hidden;
+}
+.block {
+  position: relative;
+  @include arg.npadding;
+  background-color: arg.$white;
+  border-radius: 2px;
+
+  &::before {
+    @include arg.tape;
+    left: 5px;
+    top: 25px;
+  }
+  &::after {
+    @include arg.tape;
+    right: -10%;
+    top: 20%;
+    transform: rotate(30deg);
+  }
 }
 
 
