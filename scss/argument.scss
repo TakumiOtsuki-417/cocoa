@@ -21,6 +21,12 @@ $subLineColor: #facfc7;
 $accentColorLight: #8af2c9;
 $accentColorDark: #3da67d;
 
+// 基本四隅余白
+$margin1: 1.8rem;
+$margin2: 0.8rem;
+@include nmargin {
+  margin: $margin1 $margin2;
+}
 
 // ブレイクポイントを指定
 $pcmax: 1000px;

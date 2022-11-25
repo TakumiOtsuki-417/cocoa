@@ -7,8 +7,8 @@
     $category = get_the_category();
     $currenturl = esc_url(get_permalink());
     ?>
-    <article>
-      <h1>アウトプットフェーズの個別ページ<br><?php wp_title(); ?></h1>
+    <article class="article__output">
+      <h1>アウトプット開始<br><?php the_title(); ?></h1>
       <?php //四字熟語を選別する内ループ
       $my_query = new WP_Query();
       $args = array(
@@ -32,7 +32,7 @@
       ?>
       <?php endwhile; endif; wp_reset_postdata(); ?>
     </article>
-    <aside>
+    <aside class="aside__output">
       <?php get_sidebar(); ?>
     </aside>
     <?php endwhile; endif; ?>
