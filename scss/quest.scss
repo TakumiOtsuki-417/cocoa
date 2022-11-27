@@ -1,0 +1,140 @@
+@use 'argument' as arg;
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* 問題ページに関するデザイン */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.no-checked {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+.article__quest {
+
+  h2 {
+    border: 1px solid rgba(0,0,0,0.4);
+    padding: 5px;
+    font-size: 1.0rem;
+    @include arg.pc {
+      margin-bottom: 20px;
+    }
+  }
+
+  .block-quest {
+    position: relative;
+    padding: 30px 0;
+    border-bottom: 3px dotted rgba(0,0,0,0.5);
+
+    ul {
+      display: flex;
+      padding: 5px 0;
+      border-top: 1px solid rgba(0,0,0,0.4);
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      flex-direction: column;
+      @include arg.pc {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      li {
+        width:90%;
+        margin-left: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+        @include arg.pc {
+          width: 25%;
+          text-align: center;
+          border-bottom: none;
+          border-right: 1px solid rgba(0,0,0,0.4);
+        }
+      }
+
+      li:last-child {
+        border: none;
+      }
+
+    }
+
+    .select-radio {
+      margin: 10px 0;
+    }
+
+    > p {
+      margin-top: 10px;
+    }
+
+    .block-answer {
+      width: 25%;
+      padding: 5px 0;
+      border: 1px solid rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .block-explain {
+      width: 80%;
+      padding: 0.5rem;
+      border: 1px solid rgba(0,0,0,0.4);
+    }
+
+    .second-content {
+      width:100%;
+      padding: 5px;
+      background-color: arg.$backgroundPink;
+      border: 1px solid arg.$backgroundPink;
+
+      h3 {
+        margin-bottom: 15px;
+      }
+
+    }
+
+  }
+
+  &.no-checked {
+    background-color: rgba(255, 0, 0, 0.4);
+  }
+
+  #block-answer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    #first-btn {
+      display: none;
+      padding: 0.3rem;
+      font-size: 110%;
+    }
+
+    #nocheck-message {
+      margin-top:15px;
+      text-align: center;
+      color: red;
+      border: 2px solid rgba(255, 0, 0, 0.8);
+      background-color: rgba(255, 0, 0, 0.2);
+      padding: 5px;
+      font-weight: 800;
+    }
+  }
+
+  // 正誤判定系クラス
+  .corrected::before,
+  .missed::before {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    font-size: 600%;
+    opacity: 0.3;
+  }
+  .corrected::before {
+    content:"⭕️";
+    color: red;
+  }
+  .missed::before {
+    content: "❌";
+    color: blue;
+  }
+
+}
+
+
+
+

@@ -47,6 +47,10 @@ function add_files() {
     wp_enqueue_style( 'tab', DIRE.'/scss/tab.css', array(), date("ymdHis", filemtime( DIREC.'/scss/tab.css')));
     wp_enqueue_script( 'tabjs', DIRE.'/js/tab.js' , array(), date("ymdHis", filemtime( DIREC.'/js/tab.js')));
   }
+  if(is_singular("quest")){
+    wp_enqueue_style( 'quest', DIRE.'/scss/quest.css', array(), date("ymdHis", filemtime( DIREC.'/scss/quest.css')));
+    wp_enqueue_script( 'questjs', DIRE.'/js/quest.js' , array(), date("ymdHis", filemtime( DIREC.'/js/quest.js')));
+  }
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
 // ■■■■■■■■■■■■■■■■■■■■■■■
@@ -129,3 +133,47 @@ function sceneSetting ($atts, $content = null) {
   </div>';
   }
 add_shortcode ('scene', 'sceneSetting');
+// ■■■■■■■■■■■■■■■■■■■■■■■
+// QUEST関連ショートコード
+// ■■■■■■■■■■■■■■■■■■■■■■■
+function questContent ($atts, $content = null) {
+  extract(shortcode_atts( array(
+    'num' => 0,
+    'ans1' => '選択肢1',
+    'ans2' => '選択肢2',
+    'ans3' => '選択肢3',
+    'ans4' => '選択肢4',
+    'title' => '問題文',
+    'correct' => '正解',
+  ), $atts ));
+  $content = do_shortcode (shortcode_unautop ($content));
+  $ansarray = array($ans1, $ans2, $ans3, $ans4);
+  shuffle($ansarray);
+  return '
+  <section id="block-quest-'.$num.'" class="block-quest">
+  <h3>'.$title.'</h3>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ansarray[0].'" id="score_update_'.$num.'_'.$ansarray[0].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[0].'">'.$ansarray[0].'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ansarray[1].'" id="score_update_'.$num.'_'.$ansarray[1].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[1].'">'.$ansarray[1].'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ansarray[2].'" id="score_update_'.$num.'_'.$ansarray[2].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[2].'">'.$ansarray[2].'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ansarray[3].'" id="score_update_'.$num.'_'.$ansarray[3].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[3].'">'.$ansarray[3].'</label>
+  </div>
+  <div class="second-content">
+    <h3>正解と解説</h3>
+    <p class="correct-answer" data-correct="'.$correct.'">'.$correct.'</p>
+    <div>'.$content.'</div>
+  </div>
+</section>
+';
+}
+add_shortcode ('quest', 'questContent');

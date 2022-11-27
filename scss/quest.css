@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* 問題ページに関するデザイン */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.no-checked {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.article__quest h2 {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .article__quest h2 {
+    margin-bottom: 20px;
+  }
+}
+.article__quest .block-quest {
+  position: relative;
+  padding: 30px 0;
+  border-bottom: 3px dotted rgba(0, 0, 0, 0.5);
+}
+.article__quest .block-quest ul {
+  display: flex;
+  padding: 5px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .article__quest .block-quest ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.article__quest .block-quest ul li {
+  width: 90%;
+  margin-left: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 768px) {
+  .article__quest .block-quest ul li {
+    width: 25%;
+    text-align: center;
+    border-bottom: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+  }
+}
+.article__quest .block-quest ul li:last-child {
+  border: none;
+}
+.article__quest .block-quest .select-radio {
+  margin: 10px 0;
+}
+.article__quest .block-quest > p {
+  margin-top: 10px;
+}
+.article__quest .block-quest .block-answer {
+  width: 25%;
+  padding: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.article__quest .block-quest .block-explain {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.article__quest .block-quest .second-content {
+  width: 100%;
+  padding: 5px;
+  background-color: #fff0ff;
+  border: 1px solid #fff0ff;
+}
+.article__quest .block-quest .second-content h3 {
+  margin-bottom: 15px;
+}
+.article__quest.no-checked {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+.article__quest #block-answer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.article__quest #block-answer #first-btn {
+  display: none;
+  padding: 0.3rem;
+  font-size: 110%;
+}
+.article__quest #block-answer #nocheck-message {
+  margin-top: 15px;
+  text-align: center;
+  color: red;
+  border: 2px solid rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 5px;
+  font-weight: 800;
+}
+.article__quest .corrected::before,
+.article__quest .missed::before {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  font-size: 600%;
+  opacity: 0.3;
+}
+.article__quest .corrected::before {
+  content: "⭕️";
+  color: red;
+}
+.article__quest .missed::before {
+  content: "❌";
+  color: blue;
+}/*# sourceMappingURL=quest.css.map */
