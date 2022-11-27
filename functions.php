@@ -147,24 +147,26 @@ function questContent ($atts, $content = null) {
     'correct' => '正解',
   ), $atts ));
   $content = do_shortcode (shortcode_unautop ($content));
+  $ansarray = array($ans1, $ans2, $ans3, $ans4);
+  shuffle($ansarray);
   return '
   <section id="block-quest-'.$num.'" class="block-quest">
   <h3>'.$title.'</h3>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ans1.'" id="score_update_'.$ans1.'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ans1.'">'.$ans1.'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[0].'" id="score_update_'.$ansarray[0].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ansarray[0].'">'.$ansarray[0].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ans2.'" id="score_update_'.$ans2.'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ans2.'">'.$ans2.'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[1].'" id="score_update_'.$ansarray[1].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ansarray[1].'">'.$ansarray[1].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ans3.'" id="score_update_'.$ans3.'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ans3.'">'.$ans3.'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[2].'" id="score_update_'.$ansarray[2].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ansarray[2].'">'.$ansarray[2].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ans4.'" id="score_update_'.$ans4.'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ans4.'">'.$ans4.'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[3].'" id="score_update_'.$ansarray[3].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ansarray[3].'">'.$ansarray[3].'</label>
   </div>
   <div class="second-content">
     <h3>正解と解説</h3>
