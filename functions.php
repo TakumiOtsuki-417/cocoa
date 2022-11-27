@@ -153,20 +153,20 @@ function questContent ($atts, $content = null) {
   <section id="block-quest-'.$num.'" class="block-quest">
   <h3>'.$title.'</h3>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ansarray[0].'" id="score_update_'.$ansarray[0].'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ansarray[0].'">'.$ansarray[0].'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[0].'" id="score_update_'.$num.'_'.$ansarray[0].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[0].'">'.$ansarray[0].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ansarray[1].'" id="score_update_'.$ansarray[1].'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ansarray[1].'">'.$ansarray[1].'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[1].'" id="score_update_'.$num.'_'.$ansarray[1].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[1].'">'.$ansarray[1].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ansarray[2].'" id="score_update_'.$ansarray[2].'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ansarray[2].'">'.$ansarray[2].'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[2].'" id="score_update_'.$num.'_'.$ansarray[2].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[2].'">'.$ansarray[2].'</label>
   </div>
   <div class="select-radio">
-    <input class="quest-radio" type="radio" value="'.$ansarray[3].'" id="score_update_'.$ansarray[3].'" name="score_update[select'.$num.']">
-    <label for="score_update_'.$ansarray[3].'">'.$ansarray[3].'</label>
+    <input class="quest-radio" type="radio" value="'.$ansarray[3].'" id="score_update_'.$num.'_'.$ansarray[3].'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$num.'_'.$ansarray[3].'">'.$ansarray[3].'</label>
   </div>
   <div class="second-content">
     <h3>正解と解説</h3>
