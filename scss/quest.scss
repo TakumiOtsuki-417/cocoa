@@ -125,6 +125,22 @@
     }
   }
 
+  // 正誤判定系クラス
+  .corrected::before,
+  .missed::before {
+    position: absolute;
+    font-size: 200%;
+    opacity: 0.7;
+  }
+  .corrected::before {
+    content:"◯";
+    color: red;
+  }
+  .missed::before {
+    content: "❌";
+    color: blue;
+  }
+
 }
 
 

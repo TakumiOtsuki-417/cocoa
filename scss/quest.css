@@ -103,4 +103,18 @@
   background-color: rgba(255, 0, 0, 0.2);
   padding: 5px;
   font-weight: 800;
+}
+.article__quest .corrected::before,
+.article__quest .missed::before {
+  position: absolute;
+  font-size: 200%;
+  opacity: 0.7;
+}
+.article__quest .corrected::before {
+  content: "◯";
+  color: red;
+}
+.article__quest .missed::before {
+  content: "❌";
+  color: blue;
 }/*# sourceMappingURL=quest.css.map */

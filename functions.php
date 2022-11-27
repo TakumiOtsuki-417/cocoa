@@ -133,3 +133,45 @@ function sceneSetting ($atts, $content = null) {
   </div>';
   }
 add_shortcode ('scene', 'sceneSetting');
+// ■■■■■■■■■■■■■■■■■■■■■■■
+// QUEST関連ショートコード
+// ■■■■■■■■■■■■■■■■■■■■■■■
+function questContent ($atts, $content = null) {
+  extract(shortcode_atts( array(
+    'num' => 0,
+    'ans1' => '選択肢1',
+    'ans2' => '選択肢2',
+    'ans3' => '選択肢3',
+    'ans4' => '選択肢4',
+    'title' => '問題文',
+    'correct' => '正解',
+  ), $atts ));
+  $content = do_shortcode (shortcode_unautop ($content));
+  return '
+  <section id="block-quest-'.$num.'" class="block-quest">
+  <h3>'.$title.'</h3>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ans1.'" id="score_update_'.$ans1.'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ans1.'">'.$ans1.'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ans2.'" id="score_update_'.$ans2.'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ans2.'">'.$ans2.'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ans3.'" id="score_update_'.$ans3.'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ans3.'">'.$ans3.'</label>
+  </div>
+  <div class="select-radio">
+    <input class="quest-radio" type="radio" value="'.$ans4.'" id="score_update_'.$ans4.'" name="score_update[select'.$num.']">
+    <label for="score_update_'.$ans4.'">'.$ans4.'</label>
+  </div>
+  <div class="second-content">
+    <h3>正解と解説</h3>
+    <p class="correct-answer" data-correct="'.$correct.'">'.$correct.'</p>
+    <div>'.$content.'</div>
+  </div>
+</section>
+';
+}
+add_shortcode ('quest', 'questContent');
