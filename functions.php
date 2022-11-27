@@ -47,6 +47,10 @@ function add_files() {
     wp_enqueue_style( 'tab', DIRE.'/scss/tab.css', array(), date("ymdHis", filemtime( DIREC.'/scss/tab.css')));
     wp_enqueue_script( 'tabjs', DIRE.'/js/tab.js' , array(), date("ymdHis", filemtime( DIREC.'/js/tab.js')));
   }
+  if(is_singular("quest")){
+    wp_enqueue_style( 'quest', DIRE.'/scss/quest.css', array(), date("ymdHis", filemtime( DIREC.'/scss/quest.css')));
+    wp_enqueue_script( 'questjs', DIRE.'/js/quest.js' , array(), date("ymdHis", filemtime( DIREC.'/js/quest.js')));
+  }
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
 // ■■■■■■■■■■■■■■■■■■■■■■■
