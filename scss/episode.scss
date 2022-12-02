@@ -26,7 +26,7 @@ $objectboxBorderColor: #555;
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     background-color: white;
     div {
       position: relative;
@@ -43,14 +43,19 @@ $objectboxBorderColor: #555;
       display: inline-block;
       width: 50%;
       max-width: 320px;
+      padding: 0.2rem 0;
       text-align: center;
       background-color: arg.$pink;
       border-radius: 10px;
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.8rem;
     }
   }
   .content {
     h2 {
       position: relative;
+      padding: 0.4rem 0;
       text-align: center;
       background-color: black;
       color: white;

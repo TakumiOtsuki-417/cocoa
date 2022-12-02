@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   background-color: white;
 }
 .article__episode .description div {
@@ -41,12 +41,17 @@
   display: inline-block;
   width: 50%;
   max-width: 320px;
+  padding: 0.2rem 0;
   text-align: center;
   background-color: #ff8fff;
   border-radius: 10px;
 }
+.article__episode .description p:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
 .article__episode .content h2 {
   position: relative;
+  padding: 0.4rem 0;
   text-align: center;
   background-color: black;
   color: white;
