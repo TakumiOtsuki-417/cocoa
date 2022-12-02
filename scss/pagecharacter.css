@@ -115,30 +115,30 @@
 }
 .article__characters .balloon__uminari {
   background-color: rgb(105, 158, 168);
-  border-color: rgba(26, 59, 66, 0.3);
+  border-color: rgb(66, 101, 108);
 }
 .article__characters .balloon__uminari::before {
-  border-bottom-color: rgba(26, 59, 66, 0.3);
+  border-bottom-color: rgb(66, 101, 108);
 }
 .article__characters .balloon__uminari::after {
   border-bottom-color: rgb(105, 158, 168);
 }
 .article__characters .balloon__maki {
   background-color: rgb(232, 225, 127);
-  border-color: rgba(111, 107, 56, 0.3);
+  border-color: rgb(100, 97, 54);
 }
 .article__characters .balloon__maki::before {
-  border-bottom-color: rgba(111, 107, 56, 0.3);
+  border-bottom-color: rgb(100, 97, 54);
 }
 .article__characters .balloon__maki::after {
   border-bottom-color: rgb(232, 225, 127);
 }
 .article__characters .balloon__tama {
   background-color: rgb(185, 174, 174);
-  border-color: rgba(29, 7, 10, 0.3);
+  border-color: rgb(72, 67, 67);
 }
 .article__characters .balloon__tama::before {
-  border-bottom-color: rgba(29, 7, 10, 0.3);
+  border-bottom-color: rgb(72, 67, 67);
 }
 .article__characters .balloon__tama::after {
   border-bottom-color: rgb(185, 174, 174);

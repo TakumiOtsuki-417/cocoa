@@ -15,12 +15,12 @@
     <li class="tabchara tablist active" data-tablistnum="1"><img src="<? echo get_template_directory_uri(); ?>/images/faces/cocoa1.png" alt="ココア"></li>
     <li class="tabchara tablist" data-tablistnum="2"><img src="<? echo get_template_directory_uri(); ?>/images/faces/yura1.png" alt="ユラ"></li>
     <li class="tabchara tablist" data-tablistnum="3"><img src="<? echo get_template_directory_uri(); ?>/images/faces/hako1.png" alt="ハコ"></li>
-    <li class="tabchara tablist" data-tablistnum="4"><img src="<? echo get_template_directory_uri(); ?>/images/faces/other1.png" alt="バ会長"></li>
-    <li class="tabchara tablist" data-tablistnum="5"><img src="<? echo get_template_directory_uri(); ?>/images/faces/other2.png" alt="タマ"></li>
+    <li class="tabchara tablist" data-tablistnum="4"><img src="<? echo get_template_directory_uri(); ?>/images/faces/hiro1.png" alt="バ会長"></li>
+    <li class="tabchara tablist" data-tablistnum="5"><img src="<? echo get_template_directory_uri(); ?>/images/faces/tama1.png" alt="タマ"></li>
     <li class="tabchara tablist" data-tablistnum="6"><img src="<? echo get_template_directory_uri(); ?>/images/faces/yusa1.png" alt="ユサ"></li>
     <li class="tabchara tablist" data-tablistnum="7"><img src="<? echo get_template_directory_uri(); ?>/images/faces/dumbbell1.png" alt="ダンベル"></li>
-    <li class="tabchara tablist" data-tablistnum="8"><img src="<? echo get_template_directory_uri(); ?>/images/faces/other2.png" alt="ウミナリ"></li>
-    <li class="tabchara tablist" data-tablistnum="9"><img src="<? echo get_template_directory_uri(); ?>/images/faces/other1.png" alt="マキ"></li>
+    <li class="tabchara tablist" data-tablistnum="8"><img src="<? echo get_template_directory_uri(); ?>/images/faces/maki1.png" alt="マキ"></li>
+    <li class="tabchara tablist" data-tablistnum="9"><img src="<? echo get_template_directory_uri(); ?>/images/faces/uminari1.png" alt="ウミナリ"></li>
   </ul>
   </div>
 <?php endif; ?>
