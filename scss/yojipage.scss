@@ -4,20 +4,27 @@
 /* 四字熟語アウトプット */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 
+.yojiblocks li {
+  &:nth-child(odd) .yojipage{
+    transform: rotate(0.25deg);
+  }
+  &:nth-child(even) .yojipage{
+    transform: rotate(-0.25deg);
+  }
+}
 
 .yojipage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: white;
-  width: 97%;
+  width: 99%;
   max-width: 800px;
   margin-bottom: 1.6rem;
   @include arg.npadding;
   min-height: 500px;
   position: relative;
-  transform:rotate(0.25deg);
+
 
   h2 {
     margin-bottom: 0.8rem;
@@ -44,6 +51,7 @@
   left: 10px;
   right: 10px;
   box-shadow:0 0 5px rgba(0,0,0,.2);
+  border-radius: 5px;
 }
 .yojipage:after {
   position: absolute;
@@ -62,7 +70,32 @@
   right: 10px;
   box-shadow:0 0 5px rgba(0,0,0,.2);
 }
-
+.yojirank {
+  &__blue {
+    outline: 0.2rem solid rgb(64, 64, 255);
+    outline-offset: -0.2rem;
+  }
+  &__yellow {
+    outline: 0.2rem solid rgb(235, 235, 26);
+    outline-offset: -0.2rem;
+  }
+  &__red {
+    outline: 0.2rem solid rgb(255, 58, 58);
+    outline-offset: -0.2rem;
+  }
+  &__blue::before,
+  &__blue::after {
+    background-color: rgb(64, 64, 255);
+  }
+  &__yellow::before,
+  &__yellow::after {
+    background-color: rgb(235, 235, 26);
+  }
+  &__red::before,
+  &__red::after {
+    background-color: rgb(255, 58, 58);
+  }
+}
 .yojipage__mean {
   width: 80%;
   text-align: center;
@@ -139,11 +172,23 @@
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-/* アウトプット隣接記事 */
+/* 問題リンク、アウトプット隣接記事 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.block__linkquest {
+  width: 90%;
+  margin-left: 2%;
+  transform: rotate(-2deg);
+  text-align: center;
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 120%;
+  }
+}
 
 .block__outputprevnext {
   text-align: center;
+  transform: rotate(1deg);
   h2 {
     margin-bottom: 1.5rem;
     font-size: 120%;

@@ -29,12 +29,31 @@
             'mean' => get_field('mean'),
             'explanation' => get_field('explanation'),
             'example' => get_field('example'),
+            'rank' => get_field('rank'),
             );
           get_template_part('loop-yoji', '', $args);
           ?>
         </li>
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </ul>
+      <div class="block block__linkquest">
+        <h2>問題に挑戦！</h2>
+        <?php
+        $my_query = new WP_Query();
+        $args = array(
+          'post_type' => 'quest',
+          'meta_key' => 'output',
+          'meta_value' => $outputnumber,
+          'meta_compare' => '=',
+        );
+        $my_query->query( $args );
+        if($my_query->have_posts() ): while( $my_query->have_posts() ) : $my_query->the_post();
+        ?>
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php endwhile; else: ?>
+          <p>このページに関連した問題はありませぬ。</p>
+        <?php endif; wp_reset_postdata(); ?>
+      </div>
       <div class="block block__outputprevnext">
         <h2>次いく？</h2>
         <div id="prev_next" class="clearfix">

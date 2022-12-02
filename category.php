@@ -1,6 +1,5 @@
 <?php get_header();
-global $post;
- ?>
+global $post; ?>
 <main>
   <div class="inner1000 flex73">
     <article>
@@ -19,6 +18,7 @@ global $post;
             'mean' => get_field('mean'),
             'explanation' => get_field('explanation'),
             'example' => get_field('example'),
+            'search' => true,
             );
             get_template_part('loop-yoji', '', $args);
           ?>

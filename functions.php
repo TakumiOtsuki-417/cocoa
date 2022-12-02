@@ -52,6 +52,10 @@ function add_files() {
     wp_enqueue_style( 'quest', DIRE.'/scss/quest.css', array(), date("ymdHis", filemtime( DIREC.'/scss/quest.css')));
     wp_enqueue_script( 'questjs', DIRE.'/js/quest.js' , array(), date("ymdHis", filemtime( DIREC.'/js/quest.js')));
   }
+  if((is_category()) || (is_search())){
+    wp_enqueue_style( 'postarchive', DIRE.'/scss/postarchive.css', array(), date("ymdHis", filemtime( DIREC.'/scss/postarchive.css')));
+    wp_enqueue_script( 'accordionjs', DIRE.'/js/accordion.js' , array(), date("ymdHis", filemtime( DIREC.'/js/accordion.js')));
+  }
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
 // ■■■■■■■■■■■■■■■■■■■■■■■

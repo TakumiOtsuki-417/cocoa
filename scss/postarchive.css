@@ -100,4 +100,46 @@
 }
 .accordion .accordion_cnt p {
   margin: 15px 0;
+}
+
+.yojipage .accordion {
+  width: 100%;
+}
+.yojipage .accordion_ttl {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background: #ff8fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.yojipage .accordion_ttl:before, .yojipage .accordion_ttl:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  transition: 0.2s ease transform;
+}
+.yojipage .accordion_ttl:after {
+  transform: translate(0, -50%) rotate(-90deg);
+}
+.yojipage .accordion_ttl.active:after {
+  transform: translate(0, -50%) rotate(0deg);
+}
+.yojipage .accordion_cnt {
+  max-height: 0;
+  padding-top: 2.5rem;
+  overflow: hidden;
+  transition: 0.2s ease max-height;
+}
+.yojipage .accordion_cnt p {
+  margin: 15px 0;
+}
+.yojipage .accordion_cnt .yojipage__mean {
+  margin: 0 auto;
 }/*# sourceMappingURL=postarchive.css.map */

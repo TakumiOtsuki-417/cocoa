@@ -2,19 +2,24 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* 四字熟語アウトプット */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.yojiblocks li:nth-child(odd) .yojipage {
+  transform: rotate(0.25deg);
+}
+.yojiblocks li:nth-child(even) .yojipage {
+  transform: rotate(-0.25deg);
+}
+
 .yojipage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: white;
-  width: 97%;
+  width: 99%;
   max-width: 800px;
   margin-bottom: 1.6rem;
   padding: 1.8rem 0.8rem;
   min-height: 500px;
   position: relative;
-  transform: rotate(0.25deg);
 }
 .yojipage h2 {
   margin-bottom: 0.8rem;
@@ -40,6 +45,7 @@
   left: 10px;
   right: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .yojipage:after {
@@ -58,6 +64,28 @@
   left: 10px;
   right: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.yojirank__blue {
+  outline: 0.2rem solid rgb(64, 64, 255);
+  outline-offset: -0.2rem;
+}
+.yojirank__yellow {
+  outline: 0.2rem solid rgb(235, 235, 26);
+  outline-offset: -0.2rem;
+}
+.yojirank__red {
+  outline: 0.2rem solid rgb(255, 58, 58);
+  outline-offset: -0.2rem;
+}
+.yojirank__blue::before, .yojirank__blue::after {
+  background-color: rgb(64, 64, 255);
+}
+.yojirank__yellow::before, .yojirank__yellow::after {
+  background-color: rgb(235, 235, 26);
+}
+.yojirank__red::before, .yojirank__red::after {
+  background-color: rgb(255, 58, 58);
 }
 
 .yojipage__mean {
@@ -146,10 +174,22 @@
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-/* アウトプット隣接記事 */
+/* 問題リンク、アウトプット隣接記事 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.block__linkquest {
+  width: 90%;
+  margin-left: 2%;
+  transform: rotate(-2deg);
+  text-align: center;
+}
+.block__linkquest h2 {
+  margin-bottom: 1.5rem;
+  font-size: 120%;
+}
+
 .block__outputprevnext {
   text-align: center;
+  transform: rotate(1deg);
 }
 .block__outputprevnext h2 {
   margin-bottom: 1.5rem;
