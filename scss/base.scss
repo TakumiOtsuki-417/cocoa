@@ -249,5 +249,11 @@ footer {
   border-top: 1px solid rgba(255, 143, 255, 0.2);
   border-bottom: 1px solid rgba(255, 143, 255, 0.2);
   background-color: arg.$backgroundPink;
+  .inner {
+    font-size: 85%;
+  }
+  span {
+    font-size: 85%;
+  }
 }
 

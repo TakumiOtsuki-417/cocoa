@@ -285,4 +285,10 @@ footer {
   border-top: 1px solid rgba(255, 143, 255, 0.2);
   border-bottom: 1px solid rgba(255, 143, 255, 0.2);
   background-color: #fff0ff;
+}
+.breadcrumbs .inner {
+  font-size: 85%;
+}
+.breadcrumbs span {
+  font-size: 85%;
 }/*# sourceMappingURL=base.css.map */
