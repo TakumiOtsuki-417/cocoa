@@ -43,16 +43,18 @@
   margin-bottom: 1.5rem;
   form {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
   }
   input {
     height: 30px;
     &:first-child {
       width: 70%;
+      min-width: 135px;
     }
     &:last-child {
       width: 30%;
+      min-width: 55px;
     }
   }
 }
@@ -80,6 +82,10 @@
     padding: 0.3rem 0.6rem;
     border-radius: 50%;
     font-size: 120%;
+    @include arg.pc {
+      padding: 0.2rem 0.4rem;
+      font-size: 80%;
+    }
   }
 }
 

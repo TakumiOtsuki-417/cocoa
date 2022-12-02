@@ -87,15 +87,22 @@ body {
 .flex73 > article,
 .flex73 > aside {
   width: 100%;
-  margin-top: 1.4rem;
   padding: 0 1.5rem;
+}
+.flex73 > article {
+  margin-top: 2rem;
+}
+.flex73 > aside {
+  margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
   .flex73 > article {
     width: 70%;
+    margin-top: 1.6rem;
   }
   .flex73 > aside {
     width: 30%;
+    margin-top: 1.6rem;
   }
 }
 .flex73 h1 {
@@ -139,6 +146,7 @@ main {
 
 .block {
   position: relative;
+  margin-top: 2.5rem;
   padding: 1.8rem 0.8rem;
   background-color: #fff;
   border-radius: 2px;
@@ -291,4 +299,12 @@ footer {
 }
 .breadcrumbs span {
   font-size: 85%;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumbs .inner {
+    font-size: 95%;
+  }
+  .breadcrumbs span {
+    font-size: 95%;
+  }
 }/*# sourceMappingURL=base.css.map */

@@ -84,15 +84,22 @@ body {
   > article,
   > aside {
     width: 100%;
-    margin-top: 1.4rem;
     padding: 0 1.5rem;
+  }
+  > article {
+    margin-top: 2.0rem;
+  }
+  > aside {
+    margin-top: 3.0rem;
   }
   @include arg.pc {
     > article {
       width: 70%;
+      margin-top: 1.6rem;
     }
     > aside {
       width: 30%;
+      margin-top: 1.6rem;
     }
   }
   h1 {
@@ -125,6 +132,7 @@ main {
 }
 .block {
   position: relative;
+  margin-top: 2.5rem;
   @include arg.npadding;
   background-color: arg.$white;
   border-radius: 2px;
@@ -254,6 +262,14 @@ footer {
   }
   span {
     font-size: 85%;
+  }
+  @include arg.pc {
+    .inner {
+      font-size: 95%;
+    }
+    span {
+      font-size: 95%;
+    }  
   }
 }
 
