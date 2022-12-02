@@ -32,6 +32,7 @@
 }
 .article__postarchive .phase p {
   width: 80%;
+  padding-left: 0.5rem;
   font-size: 120%;
 }
 .article__postarchive .phase li a:hover {
