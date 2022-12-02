@@ -95,7 +95,7 @@
     color: arg.$explanationColor;
     font-weight:bold;
     text-align: center;
-    margin: -1.6rem -0.5rem 1.0rem -0.5rem;
+    margin: -1.6rem -0.4rem 1.0rem -0.4rem;
     @include arg.tab {
       margin-bottom: 1.5rem;
     }
@@ -135,5 +135,27 @@
 .yojipage {
   section {
     margin-bottom: 5.0rem;
+  }
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* アウトプット隣接記事 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.block__outputprevnext {
+  text-align: center;
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 120%;
+  }
+  #prev_next {
+    display: flex;
+    flex-wrap: nowrap;
+    a {
+      width: 50%;
+    }
+    a:first-child {
+      border-right: 1px solid arg.$pink;
+    }
   }
 }

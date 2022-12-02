@@ -91,7 +91,7 @@
   color: #301530;
   font-weight: bold;
   text-align: center;
-  margin: -1.6rem -0.5rem 1rem -0.5rem;
+  margin: -1.6rem -0.4rem 1rem -0.4rem;
 }
 @media screen and (min-width: 560px) {
   .yojipage__explanation h3 {
@@ -143,4 +143,25 @@
 
 .yojipage section {
   margin-bottom: 5rem;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* アウトプット隣接記事 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.block__outputprevnext {
+  text-align: center;
+}
+.block__outputprevnext h2 {
+  margin-bottom: 1.5rem;
+  font-size: 120%;
+}
+.block__outputprevnext #prev_next {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.block__outputprevnext #prev_next a {
+  width: 50%;
+}
+.block__outputprevnext #prev_next a:first-child {
+  border-right: 1px solid #ff8fff;
 }/*# sourceMappingURL=yojipage.css.map */
