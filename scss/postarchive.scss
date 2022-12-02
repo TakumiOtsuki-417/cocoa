@@ -37,6 +37,7 @@
     }
     p {
       width: 80%;
+      padding-left: 0.5rem;
       font-size: 120%;
     }
     li a:hover {
@@ -47,6 +48,113 @@
       p {
         color: arg.$pink;
       }
+    }
+  }
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* アコーディオン機能 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.tipsAccordion {
+  margin-top: 1.5rem;
+}
+.accordion {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 0;
+    font-size: 110%;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .accordion_ttl {
+    position: relative;
+    width: 100%;
+    background: arg.$pink;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translate(0, -50%);
+      width: 14px;
+      height: 2px;
+      background: #fff;
+      transition: 0.2s ease transform;
+    }
+    &:after {
+      transform: translate(0, -50%) rotate(-90deg);
+    }
+    &.active {
+      &:after {
+        transform: translate(0, -50%) rotate(0deg);
+      }
+    }
+  }
+  .accordion_cnt {
+    padding: 0 15px;
+    background: arg.$backgroundPink;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease max-height;
+    p {
+      margin: 15px 0;
+    }
+  }
+}
+
+.yojipage{
+  .accordion {
+    width: 100%;
+  }
+  .accordion_ttl {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: arg.$pink;
+    border: 1px solid #fff;
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translate(0, -50%);
+      width: 14px;
+      height: 2px;
+      background: #fff;
+      transition: 0.2s ease transform;
+    }
+    &:after {
+      transform: translate(0, -50%) rotate(-90deg);
+    }
+    &.active {
+      &:after {
+        transform: translate(0, -50%) rotate(0deg);
+      }
+    }
+  }
+  .accordion_cnt {
+    max-height: 0;
+    padding-top: 2.5rem;
+    overflow: hidden;
+    transition: 0.2s ease max-height;
+    p {
+      margin: 15px 0;
+    }
+    .yojipage__mean {
+      margin: 0 auto;
     }
   }
 }

@@ -46,10 +46,15 @@ function add_files() {
     wp_enqueue_style( 'postarchive', DIRE.'/scss/postarchive.css', array(), date("ymdHis", filemtime( DIREC.'/scss/postarchive.css')));
     wp_enqueue_style( 'tab', DIRE.'/scss/tab.css', array(), date("ymdHis", filemtime( DIREC.'/scss/tab.css')));
     wp_enqueue_script( 'tabjs', DIRE.'/js/tab.js' , array(), date("ymdHis", filemtime( DIREC.'/js/tab.js')));
+    wp_enqueue_script( 'accordionjs', DIRE.'/js/accordion.js' , array(), date("ymdHis", filemtime( DIREC.'/js/accordion.js')));
   }
   if(is_singular("quest")){
     wp_enqueue_style( 'quest', DIRE.'/scss/quest.css', array(), date("ymdHis", filemtime( DIREC.'/scss/quest.css')));
     wp_enqueue_script( 'questjs', DIRE.'/js/quest.js' , array(), date("ymdHis", filemtime( DIREC.'/js/quest.js')));
+  }
+  if((is_category()) || (is_search())){
+    wp_enqueue_style( 'postarchive', DIRE.'/scss/postarchive.css', array(), date("ymdHis", filemtime( DIREC.'/scss/postarchive.css')));
+    wp_enqueue_script( 'accordionjs', DIRE.'/js/accordion.js' , array(), date("ymdHis", filemtime( DIREC.'/js/accordion.js')));
   }
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
@@ -73,19 +78,19 @@ function actExampleVoice ($atts, $content = null) {
   extract(shortcode_atts( array(
     'face' => 'other3',
     'name' => '???',
-), $atts ));
+  ), $atts ));
   $content = do_shortcode (shortcode_unautop ($content));
-return '<div class="act act-'.$face.'">
-  <div class="act__face">
-    <img src="'.get_template_directory_uri().'/images/faces/'.$face.'.png" alt="">
-  </div>
-  <div class="act__content">
-    <div class="name">
-      '.$name.'
+  return '<div class="act act-'.$face.'">
+    <div class="act__face">
+      <img src="'.get_template_directory_uri().'/images/faces/'.$face.'.png" alt="">
     </div>
-    <p>'.$content.'</p>
-  </div>
-</div>';
+    <div class="act__content">
+      <div class="name">
+        '.$name.'
+      </div>
+      <p>'.$content.'</p>
+    </div>
+  </div>';
 }
 add_shortcode ('aevoice', 'actExampleVoice');
 function redSpan ($atts, $content = null) {
@@ -108,17 +113,17 @@ function objectiveText ($atts, $content = null) {
 return "<p>".$content."</p>";
 }
 add_shortcode ('otext', 'objectiveText');
+function rbSpan ($atts, $content = null) {
+  extract(shortcode_atts( array(
+    'rb' => '???',
+  ), $atts ));
+  $content = do_shortcode (shortcode_unautop ($content));
+  return '<span rb="'.$rb.'">'.$content.'</span>';
+}
+add_shortcode ('rb', 'rbSpan');
 // ■■■■■■■■■■■■■■■■■■■■■■■
-// 検索フォームのショートコード
+// シーン設定のショートコード
 // ■■■■■■■■■■■■■■■■■■■■■■■
-function wordSearch () {
-  return '<form method="get" id="yojiSearch" action="'.home_url('/').'">
-  <input type="text" name="s" id="yojiSearchInput" value="'.the_search_query().'" placeholder="カスタム投稿タイプ別検索" />
-  <input type="hidden" name="post_type" value="yoji">
-  <input type="submit" value="search" accesskey="f" />
-</form>';
-  }
-  add_shortcode ('word_search', 'wordSearch');
 function sceneSetting ($atts, $content = null) {
   extract(shortcode_atts( array(
     'stage' => 'unknown',
@@ -133,6 +138,17 @@ function sceneSetting ($atts, $content = null) {
   </div>';
   }
 add_shortcode ('scene', 'sceneSetting');
+// ■■■■■■■■■■■■■■■■■■■■■■■
+// 検索フォームのショートコード
+// ■■■■■■■■■■■■■■■■■■■■■■■
+function wordSearch () {
+  return '<form method="get" id="yojiSearch" action="'.home_url('/').'">
+  <input type="text" name="s" id="yojiSearchInput" value="'.the_search_query().'" placeholder="カスタム投稿タイプ別検索" />
+  <input type="hidden" name="post_type" value="yoji">
+  <input type="submit" value="search" accesskey="f" />
+</form>';
+  }
+  add_shortcode ('word_search', 'wordSearch');
 // ■■■■■■■■■■■■■■■■■■■■■■■
 // QUEST関連ショートコード
 // ■■■■■■■■■■■■■■■■■■■■■■■

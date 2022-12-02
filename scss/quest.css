@@ -113,4 +113,8 @@
 .article__quest .missed::before {
   content: "❌";
   color: blue;
+}
+
+.block__outputprevnext {
+  width: 100%;
 }/*# sourceMappingURL=quest.css.map */

@@ -25,6 +25,43 @@
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* ダイレクト検索 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.sidebar__search h2{
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 110%;
+  &::before {
+    content: "🔍";
+  }
+  &::after {
+    content: "🔎";
+  }
+}
+
+.sidebar__search__direct {
+  margin-bottom: 1.5rem;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  input {
+    height: 30px;
+    &:first-child {
+      width: 70%;
+      min-width: 135px;
+    }
+    &:last-child {
+      width: 30%;
+      min-width: 55px;
+    }
+  }
+}
+
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* アイウエオ */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .sidebar__search__categories {
@@ -36,13 +73,20 @@
     display: none;
   }
   li {
-    width: 20%;
-    margin-bottom: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 50%;
   }
   a {
-    display: inline-block;
-    border: 1px solid rgba(0,0,0,0.5);
-    padding: 1px;
+    display: block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    font-size: 120%;
+    @include arg.pc {
+      padding: 0.2rem 0.4rem;
+      font-size: 80%;
+    }
   }
 }
 
@@ -51,17 +95,25 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .sns__container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .sns__container a {
-  width: 100%;
+  width: 25%;
   text-align: center;
   color: #fff;
   padding: 0.5rem 0;
+  transition: all 0.2s;
 }
 
 .sns__container a:hover {
   opacity: 0.6;
+}
+
+@include arg.pc{
+  .sidebar .sns__container a {
+    width: 50%;
+  }
 }
 
 .sns__twitter {

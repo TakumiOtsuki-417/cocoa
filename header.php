@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/d79adcd29b.js" crossorigin="anonymous"></script>
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <header>
       <div class="inner">
         <a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/cocoalogo.png" alt=""></a>

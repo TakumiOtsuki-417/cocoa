@@ -7,7 +7,7 @@ a:hover {
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-/* 基本フォントサイズ */
+/* 基本フォント設定 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 html {
   font-size: 8px;
@@ -27,11 +27,51 @@ html {
 }
 
 @font-face {
-  font-family: "mgenplus-1c-medium";
-  src: url("./../fonts/mgenplus-1c-medium.woff") format("woff");
+  font-family: "mgenplus-1cp-medium";
+  src: url("./../fonts/mgenplus-1cp-medium.woff") format("woff");
+}
+@font-face {
+  font-family: "mgenplus-1cp-regular";
+  src: url("./../fonts/mgenplus-1cp-regular.woff") format("woff");
 }
 html {
-  font-family: "mgenplus-1c-medium", "Hiragino Sans", "YuGothic", "Meiryo UI";
+  font-family: "mgenplus-1cp-regular", "Hiragino Sans", "YuGothic", "Meiryo UI";
+}
+
+h1,
+.home h2,
+.page-id-45 h2,
+.page-id-45 h3,
+.page-id-45 main a,
+.page-id-43 h2,
+.page-id-45 h3,
+.yojipage h2,
+.post-type-archive article h2,
+.post-type-archive article li p,
+.single-episode h2,
+.single-episode h3,
+.single-output article h2,
+.bold {
+  font-family: "mgenplus-1cp-medium", "Hiragino Sans", "YuGothic", "Meiryo UI";
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* 特殊ルビ設定 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+[rb] {
+  position: relative;
+} /* 漢字の位置を取得 */
+[rb]::before {
+  content: attr(rb); /* rbの値をcontentプロパティに代入 */
+  position: absolute;
+  top: -0.5em;
+  left: -1em; /* ルビを振る場所の幅を，ルビを振る漢字の幅よりも少し拡大 */
+  right: 0;
+  font-size: 1em;
+  transform: scale(0.5);
+  white-space: nowrap; /* 長いルビが途中で改行しないように */
+  line-height: 1; /* ルビを振る位置が親ボックスのプロパティによって変わらないように */
+  text-indent: 0; /* ルビを振る位置が親ボックスのプロパティによって変わらないように */
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
@@ -41,7 +81,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: rgba(248, 218, 210, 0.4);
-  background-image: linear-gradient(90deg, transparent 79px, #cbb3b2 79px, #cbb3b2 81px, transparent 81px), linear-gradient(rgba(203, 179, 178, 0.2823529412) 0.1em, transparent 0.1em);
+  background-image: linear-gradient(360deg, transparent 79px, #cbb3b2 79px, #cbb3b2 81px, transparent 81px), linear-gradient(rgba(203, 179, 178, 0.2823529412) 0.1em, transparent 0.1em);
   background-position: 0 0, 20px 20px;
   background-size: 100% 1.2em;
 }
@@ -68,15 +108,22 @@ body {
 .flex73 > article,
 .flex73 > aside {
   width: 100%;
-  margin-top: 1.4rem;
   padding: 0 1.5rem;
+}
+.flex73 > article {
+  margin-top: 2rem;
+}
+.flex73 > aside {
+  margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
   .flex73 > article {
     width: 70%;
+    margin-top: 1.6rem;
   }
   .flex73 > aside {
     width: 30%;
+    margin-top: 1.6rem;
   }
 }
 .flex73 h1 {
@@ -120,6 +167,7 @@ main {
 
 .block {
   position: relative;
+  margin-top: 2.5rem;
   padding: 1.8rem 0.8rem;
   background-color: #fff;
   border-radius: 2px;
@@ -266,4 +314,18 @@ footer {
   border-top: 1px solid rgba(255, 143, 255, 0.2);
   border-bottom: 1px solid rgba(255, 143, 255, 0.2);
   background-color: #fff0ff;
+}
+.breadcrumbs .inner {
+  font-size: 85%;
+}
+.breadcrumbs span {
+  font-size: 85%;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumbs .inner {
+    font-size: 95%;
+  }
+  .breadcrumbs span {
+    font-size: 95%;
+  }
 }/*# sourceMappingURL=base.css.map */

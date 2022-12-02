@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   background-color: white;
 }
 .article__episode .description div {
@@ -37,16 +37,24 @@
 .article__episode .description h2 {
   position: absolute;
   top: -1rem;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   display: inline-block;
   width: 50%;
   max-width: 320px;
+  padding: 0.2rem 0;
   text-align: center;
   background-color: #ff8fff;
   border-radius: 10px;
 }
+.article__episode .description p:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
 .article__episode .content h2 {
   position: relative;
+  padding: 0.4rem 0;
   text-align: center;
   background-color: black;
   color: white;
@@ -66,9 +74,12 @@
 .article__episode .objectiveBox {
   padding: 1rem;
   margin: 1.5rem 0;
-  border: 2px solid black;
+  border: 2px solid #555;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+.article__episode .objectiveBox p {
+  margin-bottom: 0.8rem;
 }
 .article__episode .content .wrap > img {
   box-shadow: 0 0 5px black;

@@ -4,6 +4,8 @@
 /* エピソードページ（背景システム、キャラセリフ除く） */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 
+$objectboxBorderColor: #555;
+
 .article__episode {
   position: relative;
   display: flex;
@@ -24,7 +26,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     background-color: white;
     div {
       position: relative;
@@ -37,18 +39,26 @@
     h2 {
       position: absolute;
       top: -1.0rem;
-      left: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
       display: inline-block;
       width: 50%;
       max-width: 320px;
+      padding: 0.2rem 0;
       text-align: center;
       background-color: arg.$pink;
       border-radius: 10px;
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.8rem;
     }
   }
   .content {
     h2 {
       position: relative;
+      padding: 0.4rem 0;
       text-align: center;
       background-color: black;
       color: white;
@@ -69,9 +79,12 @@
   .objectiveBox {
     padding: 1rem;
     margin: 1.5rem 0;
-    border: 2px solid black;
+    border: 2px solid $objectboxBorderColor;
     border-radius: 5px;
     background-color: rgba(255,255,255,0.8);
+    p {
+      margin-bottom: 0.8rem;
+    }
   }
   .content .wrap > img {
     box-shadow: 0 0 5px black;
