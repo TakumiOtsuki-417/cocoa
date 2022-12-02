@@ -43,4 +43,61 @@
 }
 .article__postarchive .phase li a:hover p {
   color: #ff8fff;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* アコーディオン機能 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.tipsAccordion {
+  margin-top: 1.5rem;
+}
+
+.accordion {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.accordion h2 {
+  margin-bottom: 0;
+  font-size: 110%;
+}
+.accordion h2::before, .accordion h2::after {
+  display: none;
+}
+.accordion .accordion_ttl {
+  position: relative;
+  width: 100%;
+  background: #ff8fff;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.accordion .accordion_ttl:before, .accordion .accordion_ttl:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  transition: 0.2s ease transform;
+}
+.accordion .accordion_ttl:after {
+  transform: translate(0, -50%) rotate(-90deg);
+}
+.accordion .accordion_ttl.active:after {
+  transform: translate(0, -50%) rotate(0deg);
+}
+.accordion .accordion_cnt {
+  padding: 0 15px;
+  background: #fff0ff;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease max-height;
+}
+.accordion .accordion_cnt p {
+  margin: 15px 0;
 }/*# sourceMappingURL=postarchive.css.map */

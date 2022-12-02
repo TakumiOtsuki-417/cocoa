@@ -3,7 +3,7 @@ get_header(); ?>
 <main>
   <div class="inner1000 flex73">
     <article class="article__postarchive">
-      <h1>アウトプットテキスト</h1>
+      <h1>復習チャレンジ！</h1>
       <div class="block">
         <?php get_template_part("tab"); ?>
         <?php // 8セクションをループ
@@ -31,6 +31,9 @@ get_header(); ?>
           </ul>
         </section>
         <?php endfor; ?>
+        <section class="tipsAccordion">
+          <?php get_template_part('accordion'); ?>
+        </section>
       </div>
     </article>
     <aside  class="aside__postarchive">

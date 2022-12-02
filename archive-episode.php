@@ -34,6 +34,9 @@
           </ul>
         </section>
         <?php endfor; ?>
+        <section class="tipsAccordion">
+          <?php get_template_part('accordion'); ?>
+        </section>
       </div>
     </article>
     <aside>

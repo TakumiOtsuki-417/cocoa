@@ -46,6 +46,7 @@ function add_files() {
     wp_enqueue_style( 'postarchive', DIRE.'/scss/postarchive.css', array(), date("ymdHis", filemtime( DIREC.'/scss/postarchive.css')));
     wp_enqueue_style( 'tab', DIRE.'/scss/tab.css', array(), date("ymdHis", filemtime( DIREC.'/scss/tab.css')));
     wp_enqueue_script( 'tabjs', DIRE.'/js/tab.js' , array(), date("ymdHis", filemtime( DIREC.'/js/tab.js')));
+    wp_enqueue_script( 'accordionjs', DIRE.'/js/accordion.js' , array(), date("ymdHis", filemtime( DIREC.'/js/accordion.js')));
   }
   if(is_singular("quest")){
     wp_enqueue_style( 'quest', DIRE.'/scss/quest.css', array(), date("ymdHis", filemtime( DIREC.'/scss/quest.css')));
