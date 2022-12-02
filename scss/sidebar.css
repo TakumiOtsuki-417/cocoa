@@ -47,8 +47,9 @@
 /* ダイレクト検索 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .sidebar__search h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+  font-size: 110%;
 }
 .sidebar__search h2::before {
   content: "🔍";

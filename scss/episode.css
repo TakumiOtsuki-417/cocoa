@@ -37,7 +37,10 @@
 .article__episode .description h2 {
   position: absolute;
   top: -1rem;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   display: inline-block;
   width: 50%;
   max-width: 320px;

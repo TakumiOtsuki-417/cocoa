@@ -21,13 +21,34 @@ html {
 }
 
 @font-face {
-  font-family: 'mgenplus-1c-medium';
-  src: url('./../fonts/mgenplus-1c-medium.woff') format('woff');
+  font-family: 'mgenplus-1cp-medium';
+  src: url('./../fonts/mgenplus-1cp-medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'mgenplus-1cp-regular';
+  src: url('./../fonts/mgenplus-1cp-regular.woff') format('woff');
 }
 
 html {
-  font-family: 'mgenplus-1c-medium', 'Hiragino Sans', 'YuGothic', 'Meiryo UI';
+  font-family: 'mgenplus-1cp-regular', 'Hiragino Sans', 'YuGothic', 'Meiryo UI';
 }
+h1,
+.home h2,
+.page-id-45 h2,
+.page-id-45 h3,
+.page-id-45 main a,
+.page-id-43 h2,
+.page-id-45 h3,
+.yojipage h2,
+.post-type-archive article h2,
+.post-type-archive article li p,
+.single-episode h2,
+.single-episode h3,
+.single-output article h2,
+.bold{
+  font-family: 'mgenplus-1cp-medium', 'Hiragino Sans', 'YuGothic', 'Meiryo UI';
+}
+
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* 特殊ルビ設定 */
