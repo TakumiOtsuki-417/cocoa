@@ -44,6 +44,38 @@
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* ダイレクト検索 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+.sidebar__search h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.sidebar__search h2::before {
+  content: "🔍";
+}
+.sidebar__search h2::after {
+  content: "🔎";
+}
+
+.sidebar__search__direct {
+  margin-bottom: 1.5rem;
+}
+.sidebar__search__direct form {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.sidebar__search__direct input {
+  height: 30px;
+}
+.sidebar__search__direct input:first-child {
+  width: 70%;
+}
+.sidebar__search__direct input:last-child {
+  width: 30%;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* アイウエオ */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 .sidebar__search__categories ul {
@@ -54,13 +86,16 @@
   display: none;
 }
 .sidebar__search__categories li {
-  width: 20%;
-  margin-bottom: 20px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
 .sidebar__search__categories a {
-  display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  padding: 1px;
+  display: block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  font-size: 120%;
 }
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
