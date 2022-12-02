@@ -11,14 +11,13 @@
 }
 .act__face {
   width: 25%;
-  border: 1px solid black;
+  border: 3px solid #555;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
 }
 .act__face img {
   position: relative;
-  top: 3%;
 }
 
 .act__content {
@@ -35,8 +34,7 @@
   border-radius: 10px;
   box-sizing: border-box;
 }
-
-.act__content:before {
+.act__content::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -46,8 +44,7 @@
   border-right: 12px solid #FFF;
   z-index: 2;
 }
-
-.act__content:after {
+.act__content::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -57,7 +54,6 @@
   border-right: 14px solid #555;
   z-index: 1;
 }
-
 .act__content p {
   margin: 0;
   padding: 0;
@@ -72,9 +68,11 @@
   top: -18px;
   left: -8px;
   max-width: 100%;
+  min-width: 25%;
   padding: 0.2rem;
-  border: 3px solid red;
+  border: 3px solid #555;
   border-radius: 10px;
+  text-align: center;
   background-color: white;
 }
 

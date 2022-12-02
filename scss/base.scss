@@ -8,7 +8,7 @@ a {
 
 }
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
-/* 基本フォントサイズ */
+/* 基本フォント設定 */
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 html {
   @include arg.fontsize(8);
@@ -28,6 +28,25 @@ html {
 html {
   font-family: 'mgenplus-1c-medium', 'Hiragino Sans', 'YuGothic', 'Meiryo UI';
 }
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+/* 特殊ルビ設定 */
+/* ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+[rb] {position: relative;}  /* 漢字の位置を取得 */
+[rb]::before {
+  content: attr(rb);  /* rbの値をcontentプロパティに代入 */
+  position: absolute;
+  top: -0.5em;
+  left: -1.0em;  /* ルビを振る場所の幅を，ルビを振る漢字の幅よりも少し拡大 */
+  right: 0;
+  font-size: 1.0em;
+  transform: scale(0.5);
+  white-space: nowrap;  /* 長いルビが途中で改行しないように */
+  line-height: 1;  /* ルビを振る位置が親ボックスのプロパティによって変わらないように */
+  text-indent: 0;  /* ルビを振る位置が親ボックスのプロパティによって変わらないように */
+  }
+
 
 /* ■■■■■■■■■■■■■■■■■■■■■■■ */
 /* 基本構造 */
