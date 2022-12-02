@@ -17,7 +17,7 @@
 }
 .article__about h2, .aside__about h2 {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }

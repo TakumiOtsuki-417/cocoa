@@ -7,7 +7,8 @@
     </article>
     <?php endwhile; endif; ?>
     <aside class="aside__about">
-      <?php get_template_part("note"); ?>
+      <?php get_template_part("note");
+      get_template_part("sns"); ?>
     </aside>
   </div>
 </main>

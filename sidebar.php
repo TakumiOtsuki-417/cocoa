@@ -7,3 +7,6 @@
     <?php get_template_part('aiueo'); ?>
   </div>
 </div>
+<div class="block">
+  <?php get_template_part("sns"); ?>
+</div>
